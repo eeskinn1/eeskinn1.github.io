@@ -1,4 +1,3 @@
-
 ---
 title: Block Diagram
 ---
