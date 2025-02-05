@@ -1,0 +1,54 @@
+---
+title: Component Selection
+---
+
+## Microcontroller Selection
+
+The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
+which has many forms and pin counts. This brand of microcontroller is appealing because of
+prior experience with this component. My responsibilities in this project is the sensing portion. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:
+
+- 4x Uart Pins
+- 4x GPIO Pins
+- 2x Clock Pins
+- 2x SPI Pins
+- 1x ADC Pin
+- 1x Vcc Pin
+- 2x Vss Pin
+Total is 16 Pins
+
+
+
+
+
+| PIC Info                                      | Answer | Help                                                                                                      |
+| --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| Model                                         | PIC18F27Q10      | Include the entire part number (leave off any letters at the end that specify the package type)           |
+| Product Page URL                              | [MicroChip Product Page](https://www.microchip.com/en-us/product/pic18f27q10)       | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Datasheet URL(s)                              | [Product Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)      | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Application Notes URL(s)                      | [5-Bit Digital-to-Analog Converter](https://www.microchip.com/en-us/application-notes/tb3238) - [Writing C-Code for PIC18F](https://www.microchip.com/en-us/application-notes/tb3261)  - [SPI Using MSSP on PIC18](https://www.microchip.com/en-us/application-notes/tb3265) - [Using EUSART on PIC18](https://www.microchip.com/en-us/application-notes/tb3282)   | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Vendor link                                   | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-E-SO/12807408?0=%2Fmicrocontrollers&s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPZQDaIALAAxwDMdIAuoQA4AuUIAymwE4CWAOwDmIAL6EwAJjgRoIFJAw4CxMuBgBWAOzaEzEO048BI8YQC0FRArRY8hEpHJSpmgBwwmEkBa-zFPgBXVSdyWm8fKXUABQBJAGEwdwAxKW0ARTAqbyA)      | Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a [link](#)                       |
+| Code Examples                                 | [EUSART Receive Control Commands](https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-eusart-commands-fs/tree/1.0.2) - [EUSART Send Formatted Messages Using printf](https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-eusart-printf-bare/tree/1.0.3) - [Receiving Data as an SPI Device](https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-spi-client-receive-bare/tree/1.0.0) - [Sensor Data Acquisition using 10-bit ADCC](https://github.com/microchip-pic-avr-examples/pic18f47q10-adcc-sensor-data-acquisition-mplab/tree/1.0.1)      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
+| External Resources URL(s)                     | [PIC Forum](https://www.reddit.com/r/pic_programming/)      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
+| Unit cost                                     | $1.60      | Find in the Microchip online store, or Digikey                                                            |
+| Absolute Maximum Current for entire IC        | 350mA      | Find in the microcontroller datasheet                                                                     |
+| Supply Voltage Range                          |  1.8V / 3.3 - 5V / 5.5V / ~5.5V      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                 |
+| Absolute Maximum current <br> (for entire IC) | ?      | as found in datasheet                                                                                     |
+| Maximum GPIO current <br> (per pin)           | 25mA      | as found in datasheet                                                                                     |
+| Supports External Interrupts?                 | ?      | as found in datasheet                                                                                     |
+| Required Programming Hardware, Cost, URL      | Programming: [PG164100](https://www.digikey.com/en/products/detail/microchip-technology/PG164100/9562532) - $15.30      | found on the microcontroller's product page                                                               |
+| Works with MPLabX?                            | Yes      | Required.  See [Microchip Development Tools](https://www.microchip.com/development-tools)                 |
+| Works with Microchip Code Configurator?       | Yes (See Below)      | Can be validated in MPLabX.  Screenshot required.                                                         |
+
+
+| Module | # Available | Needed | Associated Pins (or * for any) |
+| ---------- | ----------- | ------ | ------------------------------ |
+| GPIO       | ?           | ?      | ?                              |
+| ADC        | ?           | ?      | ?                              |
+| UART       | ?           | ?      | ?                              |
+| SPI        | ?           | ?      | ?                              |
+| I2C        | ?           | ?      | ?                              |
+| PWM        | ?           | ?      | ?                              |
+| ICSP       | ?           | 1      | ?                              |
+| ...        | ...         | ...    | ...                            |
+
