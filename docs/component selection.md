@@ -2,11 +2,27 @@
 title: Component Selection
 ---
 
+## Voltage Regulator Selection
+
+|       Solution 1       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![LM2576HVS-3.3](docs\LM2576HVS-3.3.jpg) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
+
+|       Solution 2       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![LM2674M-3.3](docs\LM2674M-3.3.jpg) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
+
+|       Solution 3       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+| ![LM2676S-3.3](docs\LM2676S-3.3.jpg) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
+
+The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
+
 ## Microcontroller Selection
 
 The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
-prior experience with this component. My responsibilities in this project is the sensing portion. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:
+prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:
 
 - 4x Uart Pins
 - 4x GPIO Pins
@@ -33,7 +49,6 @@ Total is 16 Pins
 | Unit cost                                     | $1.60      | Find in the Microchip online store, or Digikey                                                            |
 | Absolute Maximum Current for entire IC        | 350mA      | Find in the microcontroller datasheet                                                                     |
 | Supply Voltage Range                          |  1.8V / 3.3 - 5V / 5.5V / ~5.5V      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                 |
-| Absolute Maximum current <br> (for entire IC) | ?      | as found in datasheet                                                                                     |
 | Maximum GPIO current <br> (per pin)           | 25mA      | as found in datasheet                                                                                     |
 | Supports External Interrupts?                 | ?      | as found in datasheet                                                                                     |
 | Required Programming Hardware, Cost, URL      | Programming: [PG164100](https://www.digikey.com/en/products/detail/microchip-technology/PG164100/9562532) - $15.30      | found on the microcontroller's product page                                                               |
