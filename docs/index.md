@@ -5,8 +5,6 @@ tags:
 - tag2
 ---
 
-## Design Project
+## EGR314 Team 310 Project
 
-My name is Evan Skinner I am an ASU student pursuing a bachelors
-in Electrical Engineering. This webpage will serve as a repository for the
-files, work and photos of my design project for EGR314.
+- Evan Skinner
