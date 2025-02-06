@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#microcontroller-selection" class="md-skip">
+        <a href="#voltage-regulator-selection" class="md-skip">
           Skip to content
         </a>
       
@@ -420,6 +420,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#voltage-regulator-selection" class="md-nav__link">
+    Voltage Regulator Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller-selection" class="md-nav__link">
     Microcontroller Selection
   </a>
@@ -459,6 +466,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#voltage-regulator-selection" class="md-nav__link">
+    Voltage Regulator Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller-selection" class="md-nav__link">
     Microcontroller Selection
   </a>
@@ -490,10 +504,60 @@
 
   <h1>Component Selection</h1>
 
+<h2 id="voltage-regulator-selection">Voltage Regulator Selection</h2>
+<table>
+<thead>
+<tr>
+<th>Solution 1</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="docs\LM2576HVS-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2576HVS-3.3" src="docs\LM2576HVS-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917">LM2576HVS-3.3</a> <br> - $8.45</td>
+<td>- High Voltage Input <br> - 3 Amp output <br> - Easier to solder size</td>
+<td>- Lower Efficiency (75% @ 3.3V)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 2</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="docs\LM2674M-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2674M-3.3" src="docs\LM2674M-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129">LM2674M-3.3</a> <br> - $3.97</td>
+<td>- 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design</td>
+<td>- 500mA output</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 3</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="docs\LM2676S-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2676S-3.3" src="docs\LM2676S-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809">LM2676S-3.3</a> <br> - $5.72</td>
+<td>- 86% efficiency @ 3.3V <br> - 3A Output</td>
+<td>- Lower input Voltage</td>
+</tr>
+</tbody>
+</table>
+<p>The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.</p>
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
 <p>The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
-prior experience with this component. My responsibilities in this project is the sensing portion. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:</p>
+prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:</p>
 <ul>
 <li>4x Uart Pins</li>
 <li>4x GPIO Pins</li>
@@ -562,11 +626,6 @@ Total is 16 Pins</li>
 <td>Supply Voltage Range</td>
 <td>1.8V / 3.3 - 5V / 5.5V / ~5.5V</td>
 <td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
-</tr>
-<tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
 </tr>
 <tr>
 <td>Maximum GPIO current <br> (per pin)</td>
