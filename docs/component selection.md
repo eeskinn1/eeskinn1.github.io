@@ -6,15 +6,15 @@ title: Component Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2576HVS-3.3](LM2576HVS-3.3.jpg) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
+|![LM2576HVS-3.3](LM2576HVS-3.3.jpg?raw=true) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2674M-3.3](LM2674M-3.3.jpg) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
+|![LM2674M-3.3](LM2674M-3.3.jpg?raw=true) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-| ![LM2676S-3.3](LM2676S-3.3.jpg) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
+| ![LM2676S-3.3](LM2676S-3.3.jpg?raw=true) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
 
 The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
 
