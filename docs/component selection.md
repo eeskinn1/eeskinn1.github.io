@@ -6,62 +6,62 @@ title: Component Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2576HVS-3.3](LM2576HVS-3.3.jpg) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
+|![LM2576HVS-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2576HVS-3.3.jpg?raw=true) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2674M-3.3](LM2674M-3.3.jpg) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
+|![LM2674M-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2674M-3.3.jpg?raw=true) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-| ![LM2676S-3.3](LM2676S-3.3.jpg) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
+| ![LM2676S-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2676S-3.3.jpg?raw=true) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
 
-The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing 
-heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more 
+The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing
+heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more
 compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
 
 ## Analog Digital Converter Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MCP3008](Assets\MCP3008.jpg) <br> [MCP3008](https://www.digikey.com/en/products/detail/microchip-technology/MCP3008T-I-SL/319424) <br> - $2.90 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
+|![MCP3008](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MCP3008.jpg?raw=true) <br> [MCP3008](https://www.digikey.com/en/products/detail/microchip-technology/MCP3008T-I-SL/319424) <br> - $2.90 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS1115IDGST](Assets\ADS1115IDGST.jpg) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) <br> -  | - Expensive <br> - I²C interface|
+|![ADS1115IDGST](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) <br> -  | - Expensive <br> - I²C interface|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS7828EB](Assets\ADS7828EB.jpg) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution <br> -  <br> -  | - external reference voltage <br> -  I²C Bus Congestion|
+|![ADS7828EB](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution <br> -  <br> -  | - external reference voltage <br> -  I²C Bus Congestion|
 
 ## Shift Register Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![74HC165]() <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 digital inputs <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
+|![74HC165](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/SN74HC165DR.jpg?raw=true) <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 digital inputs <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![CD4021]() <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
+|![CD4021](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/CD4021BQDRQ1.jpg?raw=true) <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MC74HC165A]() <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
+|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
 
 
 ## Sensor Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![Through-beam IR sensor]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
 
 
 ## Microcontroller Selection
