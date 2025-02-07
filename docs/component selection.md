@@ -6,17 +6,63 @@ title: Component Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2576HVS-3.3](LM2576HVS-3.3.jpg?raw=true) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
+|![LM2576HVS-3.3](LM2576HVS-3.3.jpg) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2674M-3.3](LM2674M-3.3.jpg?raw=true) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
+|![LM2674M-3.3](LM2674M-3.3.jpg) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-| ![LM2676S-3.3](LM2676S-3.3.jpg?raw=true) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
+| ![LM2676S-3.3](LM2676S-3.3.jpg) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
 
-The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
+The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing 
+heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more 
+compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
+
+## Analog Digital Converter Selection
+
+|       Solution 1       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![MCP3008](Assets\MCP3008.jpg) <br> [MCP3008](https://www.digikey.com/en/products/detail/microchip-technology/MCP3008T-I-SL/319424) <br> - $2.90 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
+
+|       Solution 2       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![ADS1115IDGST](Assets\ADS1115IDGST.jpg) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) <br> -  | - Expensive <br> - I²C interface|
+
+|       Solution 3       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![ADS7828EB](Assets\ADS7828EB.jpg) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution <br> -  <br> -  | - external reference voltage <br> -  I²C Bus Congestion|
+
+## Shift Register Selection
+
+|       Solution 1       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![74HC165 ]() <br> [74HC165 ]() <br> - $ | -  <br> -  <br> -  | -  |
+
+|       Solution 2       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![CD4021 ]() <br> [CD4021 ]() <br> - $ | -  <br> -  <br> -  | -  |
+
+|       Solution 3       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![MC74HC165A ]() <br> [MC74HC165A ]() <br> - $ | -  <br> -  <br> -  | -  |
+
+
+## Sensor Selection
+
+|       Solution 1       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![Through-beam IR sensor]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+
+|       Solution 2       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+
+|       Solution 3       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|![]() <br> []() <br> - $ | -  <br> -  <br> -  | -  |
+
 
 ## Microcontroller Selection
 
