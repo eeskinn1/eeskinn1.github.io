@@ -57,31 +57,17 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
+|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
-
+|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg=250x) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
 
 ## Microcontroller Selection
 
 The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
 prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:
-
-- 4x Uart Pins
-- 4x GPIO Pins
-- 2x Clock Pins
-- 2x SPI Pins
-- 1x ADC Pin
-- 1x Vcc Pin
-- 2x Vss Pin
-Total is 16 Pins
-
-
-
-
 
 | PIC Info                                      | Answer | Help                                                                                                      |
 | --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
@@ -104,12 +90,12 @@ Total is 16 Pins
 
 | Module | # Available | Needed | Associated Pins (or * for any) |
 | ---------- | ----------- | ------ | ------------------------------ |
-| GPIO       | ?           | ?      | ?                              |
-| ADC        | ?           | ?      | ?                              |
-| UART       | ?           | ?      | ?                              |
-| SPI        | ?           | ?      | ?                              |
-| I2C        | ?           | ?      | ?                              |
-| PWM        | ?           | ?      | ?                              |
-| ICSP       | ?           | 1      | ?                              |
-| ...        | ...         | ...    | ...                            |
+| GPIO       | 36x           | 6x      | ?                              |
+| ADC        | 35x           | 0x      | ?                              |
+| UART       | 2x           | 2x      | ?                              |
+| SPI        | 2x           | 2x      | ?                              |
+| I2C        | 2x           | 2x      | ?                              |
+| PWM        | 2x           | 0x      | ?                              |
+| ICSP       | 1x           | 1x      | ?                              |
+| Clock      | 2x           | 2x      | 
 
