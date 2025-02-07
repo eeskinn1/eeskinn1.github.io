@@ -28,11 +28,13 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS1115IDGST](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) <br> -  | - Expensive <br> - I²C interface|
+|![ADS1115IDGST](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) | - Expensive <br> - I²C interface|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS7828EB](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution <br> -  <br> -  | - external reference voltage <br> -  I²C Bus Congestion|
+|![ADS7828EB](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution | - external reference voltage <br> -  I²C Bus Congestion|
+
+The MCP3008 is the final choice because it provides 8 channels of 10-bit analog-to-digital conversion, making it ideal for handling multiple analog sensors while keeping costs low. It communicates using SPI, which is both fast and widely supported by microcontrollers, ensuring reliable data transfer. Additionally, its affordability at $2.90 makes it a good option for applications requiring multiple ADC inputs. While it does require more microcontroller pins for SPI, the trade-off is worthwhile for its expandability and performance.
 
 ## Shift Register Selection
 
@@ -46,22 +48,25 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
+|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
 
+The 74HC165 is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.
 
 ## Sensor Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
+|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
+|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
+|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
+
+The HiLetgo Infrared Emitter and Receiver is an excellent choice due to its high accuracy in detecting objects, making it ideal for precise ball-tracking applications. It also has a fast response time, ensuring real-time detection without significant delays. Additionally, at $0.55 per pair, it is cost-effective for implementing multiple detection points within budget. However, it requires proper alignment between the emitter and receiver, which may add complexity to installation and calibration.
 
 ## Microcontroller Selection
 
@@ -97,5 +102,5 @@ prior experience with this component. My responsibilities in this project is the
 | I2C        | 2x           | 2x      | ?                              |
 | PWM        | 2x           | 0x      | ?                              |
 | ICSP       | 1x           | 1x      | ?                              |
-| Clock      | 2x           | 2x      | 
+| Clock      | 2x           | 2x      |                                |
 
