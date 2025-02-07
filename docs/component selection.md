@@ -46,14 +46,14 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
+|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
 
 
 ## Sensor Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
+|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
@@ -61,7 +61,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg=250x) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
+|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
 
 ## Microcontroller Selection
 
