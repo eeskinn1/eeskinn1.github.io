@@ -723,7 +723,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A1308KUA-1-T" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585">A1308KUA-1-T</a> <br> - $1.26</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A1308KUA-1-T" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585">A1308KUA-1-T</a> <br> - $1.26</td>
 <td>- Accurate <br> - Easier</td>
 <td>- Ball must be magnetized <br> - Interference from Coil</td>
 </tr>
@@ -739,7 +739,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HC-SR04" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533">HC-SR04</a> <br> - $5.95</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg=250x" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HC-SR04" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg=250x" /></a> <br> <a href="https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533">HC-SR04</a> <br> - $5.95</td>
 <td>- Easy to set up  <br> - Not Light dependent</td>
 <td>- Expensive <br> - Slow</td>
 </tr>
@@ -749,16 +749,6 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 <p>The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
 prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:</p>
-<ul>
-<li>4x Uart Pins</li>
-<li>4x GPIO Pins</li>
-<li>2x Clock Pins</li>
-<li>2x SPI Pins</li>
-<li>1x ADC Pin</li>
-<li>1x Vcc Pin</li>
-<li>2x Vss Pin
-Total is 16 Pins</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -857,51 +847,51 @@ Total is 16 Pins</li>
 <tbody>
 <tr>
 <td>GPIO</td>
-<td>?</td>
-<td>?</td>
+<td>36x</td>
+<td>6x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td>?</td>
-<td>?</td>
+<td>35x</td>
+<td>0x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>UART</td>
-<td>?</td>
-<td>?</td>
+<td>2x</td>
+<td>2x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>SPI</td>
-<td>?</td>
-<td>?</td>
+<td>2x</td>
+<td>2x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>?</td>
-<td>?</td>
+<td>2x</td>
+<td>2x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>PWM</td>
-<td>?</td>
-<td>?</td>
+<td>2x</td>
+<td>0x</td>
 <td>?</td>
 </tr>
 <tr>
 <td>ICSP</td>
-<td>?</td>
-<td>1</td>
+<td>1x</td>
+<td>1x</td>
 <td>?</td>
 </tr>
 <tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td>Clock</td>
+<td>2x</td>
+<td>2x</td>
+<td></td>
 </tr>
 </tbody>
 </table>
