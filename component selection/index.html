@@ -626,7 +626,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 <tbody>
 <tr>
 <td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ADS1115IDGST" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298">ADS1115IDGST</a> <br> - $6.29</td>
-<td>- Programmable gain amplifier <br> - Very Precise (16 bit) <br> -</td>
+<td>- Programmable gain amplifier <br> - Very Precise (16 bit)</td>
 <td>- Expensive <br> - I²C interface</td>
 </tr>
 </tbody>
@@ -642,11 +642,12 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 <tbody>
 <tr>
 <td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ADS7828EB" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484">ADS7828EB</a> <br> - $6.52</td>
-<td>- 12-bit resolution <br> -  <br> -</td>
+<td>- 12-bit resolution</td>
 <td>- external reference voltage <br> -  I²C Bus Congestion</td>
 </tr>
 </tbody>
 </table>
+<p>The MCP3008 is the final choice because it provides 8 channels of 10-bit analog-to-digital conversion, making it ideal for handling multiple analog sensors while keeping costs low. It communicates using SPI, which is both fast and widely supported by microcontrollers, ensuring reliable data transfer. Additionally, its affordability at $2.90 makes it a good option for applications requiring multiple ADC inputs. While it does require more microcontroller pins for SPI, the trade-off is worthwhile for its expandability and performance.</p>
 <h2 id="shift-register-selection">Shift Register Selection</h2>
 <table>
 <thead>
@@ -690,12 +691,13 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MC74HC165A" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450">MC74HC165A</a> <br> - $0.99</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MC74HC165A" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450">MC74HC165A</a> <br> - $0.99</td>
 <td>- Faster Clock <br> - 3 Pins</td>
 <td>- More expensive <br> - Less Common</td>
 </tr>
 </tbody>
 </table>
+<p>The 74HC165 is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.</p>
 <h2 id="sensor-selection">Sensor Selection</h2>
 <table>
 <thead>
@@ -707,7 +709,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IR sensor" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png" /></a> <br> <a href="https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4">HiLetgo Infrared Emitter and Receiver</a> <br> - $0.55 per pair</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IR sensor" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true" /></a> <br> <a href="https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4">HiLetgo Infrared Emitter and Receiver</a> <br> - $0.55 per pair</td>
 <td>- High Accuracy <br> - Fast Response Time <br> - Inexpensive</td>
 <td>- Requires Alignment</td>
 </tr>
@@ -723,7 +725,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A1308KUA-1-T" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585">A1308KUA-1-T</a> <br> - $1.26</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="A1308KUA-1-T" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585">A1308KUA-1-T</a> <br> - $1.26</td>
 <td>- Accurate <br> - Easier</td>
 <td>- Ball must be magnetized <br> - Interference from Coil</td>
 </tr>
@@ -739,12 +741,13 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HC-SR04" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533">HC-SR04</a> <br> - $5.95</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HC-SR04" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533">HC-SR04</a> <br> - $5.95</td>
 <td>- Easy to set up  <br> - Not Light dependent</td>
 <td>- Expensive <br> - Slow</td>
 </tr>
 </tbody>
 </table>
+<p>The HiLetgo Infrared Emitter and Receiver is an excellent choice due to its high accuracy in detecting objects, making it ideal for precise ball-tracking applications. It also has a fast response time, ensuring real-time detection without significant delays. Additionally, at $0.55 per pair, it is cost-effective for implementing multiple detection points within budget. However, it requires proper alignment between the emitter and receiver, which may add complexity to installation and calibration.</p>
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
 <p>The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
