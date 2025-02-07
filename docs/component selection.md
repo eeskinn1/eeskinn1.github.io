@@ -38,15 +38,15 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![74HC165 ]() <br> [74HC165 ]() <br> - $ | -  <br> -  <br> -  | -  |
+|![74HC165]() <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 digital inputs <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![CD4021 ]() <br> [CD4021 ]() <br> - $ | -  <br> -  <br> -  | -  |
+|![CD4021]() <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MC74HC165A ]() <br> [MC74HC165A ]() <br> - $ | -  <br> -  <br> -  | -  |
+|![MC74HC165A]() <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
 
 
 ## Sensor Selection
