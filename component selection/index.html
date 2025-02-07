@@ -427,6 +427,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#analog-digital-converter-selection" class="md-nav__link">
+    Analog Digital Converter Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shift-register-selection" class="md-nav__link">
+    Shift Register Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-selection" class="md-nav__link">
+    Sensor Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller-selection" class="md-nav__link">
     Microcontroller Selection
   </a>
@@ -468,6 +489,27 @@
         <li class="md-nav__item">
   <a href="#voltage-regulator-selection" class="md-nav__link">
     Voltage Regulator Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analog-digital-converter-selection" class="md-nav__link">
+    Analog Digital Converter Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shift-register-selection" class="md-nav__link">
+    Shift Register Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sensor-selection" class="md-nav__link">
+    Sensor Selection
   </a>
   
 </li>
@@ -515,7 +557,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="LM2576HVS-3.3.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2576HVS-3.3" src="LM2576HVS-3.3.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917">LM2576HVS-3.3</a> <br> - $8.45</td>
+<td><a class="glightbox" href="LM2576HVS-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2576HVS-3.3" src="LM2576HVS-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917">LM2576HVS-3.3</a> <br> - $8.45</td>
 <td>- High Voltage Input <br> - 3 Amp output <br> - Easier to solder size</td>
 <td>- Lower Efficiency (75% @ 3.3V)</td>
 </tr>
@@ -531,7 +573,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="LM2674M-3.3.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2674M-3.3" src="LM2674M-3.3.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129">LM2674M-3.3</a> <br> - $3.97</td>
+<td><a class="glightbox" href="LM2674M-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2674M-3.3" src="LM2674M-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129">LM2674M-3.3</a> <br> - $3.97</td>
 <td>- 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design</td>
 <td>- 500mA output</td>
 </tr>
@@ -547,13 +589,162 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="LM2676S-3.3.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2676S-3.3" src="LM2676S-3.3.jpg?raw=true" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809">LM2676S-3.3</a> <br> - $5.72</td>
+<td><a class="glightbox" href="LM2676S-3.3.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2676S-3.3" src="LM2676S-3.3.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809">LM2676S-3.3</a> <br> - $5.72</td>
 <td>- 86% efficiency @ 3.3V <br> - 3A Output</td>
 <td>- Lower input Voltage</td>
 </tr>
 </tbody>
 </table>
-<p>The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.</p>
+<p>The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing 
+heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more 
+compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.</p>
+<h2 id="analog-digital-converter-selection">Analog Digital Converter Selection</h2>
+<table>
+<thead>
+<tr>
+<th>Solution 1</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="Assets\MCP3008.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MCP3008" src="Assets\MCP3008.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP3008T-I-SL/319424">MCP3008</a> <br> - $2.90</td>
+<td>- SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive</td>
+<td>-  More Microcontroller Pins</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 2</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="Assets\ADS1115IDGST.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ADS1115IDGST" src="Assets\ADS1115IDGST.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298">ADS1115IDGST</a> <br> - $6.29</td>
+<td>- Programmable gain amplifier <br> - Very Precise (16 bit) <br> -</td>
+<td>- Expensive <br> - I²C interface</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 3</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="glightbox" href="Assets\ADS7828EB.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ADS7828EB" src="Assets\ADS7828EB.jpg" /></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484">ADS7828EB</a> <br> - $6.52</td>
+<td>- 12-bit resolution <br> -  <br> -</td>
+<td>- external reference voltage <br> -  I²C Bus Congestion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shift-register-selection">Shift Register Selection</h2>
+<table>
+<thead>
+<tr>
+<th>Solution 1</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="74HC165 " src="" /> <br> <a href="">74HC165 </a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 2</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="CD4021 " src="" /> <br> <a href="">CD4021 </a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 3</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="MC74HC165A " src="" /> <br> <a href="">MC74HC165A </a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sensor-selection">Sensor Selection</h2>
+<table>
+<thead>
+<tr>
+<th>Solution 1</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Through-beam IR sensor" src="" /> <br> <a href=""></a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 2</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="" /> <br> <a href=""></a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Solution 3</th>
+<th>Pro</th>
+<th>Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="" /> <br> <a href=""></a> <br> - $</td>
+<td>-  <br> -  <br> -</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
 <p>The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
