@@ -32,15 +32,15 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS7828EB](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7828EB](https://www.digikey.com/en/products/detail/texas-instruments/ADS7828EB-2K5/1689484) <br> - $6.52 | - 12-bit resolution | - external reference voltage <br> -  I²C Bus Congestion|
+|![ADS7830IPWR](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7830IPWR](https://www.digikey.com/en/products/detail/texas-instruments/ADS7830IPWR/1689491) <br> - $2.99 | - I2C Interface <br> - Any I2C setting <br> - Many inputs | - Low Voltage range <br> |
 
-The MCP3008 is the final choice because it provides 8 channels of 10-bit analog-to-digital conversion, making it ideal for handling multiple analog sensors while keeping costs low. It communicates using SPI, which is both fast and widely supported by microcontrollers, ensuring reliable data transfer. Additionally, its affordability at $2.90 makes it a good option for applications requiring multiple ADC inputs. While it does require more microcontroller pins for SPI, the trade-off is worthwhile for its expandability and performance.
+The ADS7830 is the best choice because it features an I²C interface, which minimizes the number of microcontroller pins required. Its 8-bit resolution aligns well with my 8-bit microcontroller, ensuring efficient data handling without unnecessary overhead. Additionally, its low power consumption makes it ideal for applications where energy efficiency is important. While other ADCs may offer higher resolution, the ADS7830 balances performance, simplicity, and compatibility at a cost-effective price.
 
 ## Shift Register Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![74HC165](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/SN74HC165DR.jpg?raw=true) <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 digital inputs <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
+|![74HC165](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/SN74HC165DR.jpg?raw=true) <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
