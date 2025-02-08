@@ -104,3 +104,4 @@ prior experience with this component. My responsibilities in this project is the
 | ICSP       | 1x           | 1x      | ?                              |
 | Clock      | 2x           | 2x      |                                |
 
+![MPlabtest](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MPlabtest.png?raw=true)
