@@ -751,90 +751,70 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 <h2 id="microcontroller-selection">Microcontroller Selection</h2>
 <p>The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
-prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnet causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. On the topic of pin selection and quantification, I will need:</p>
+prior experience with this component. My responsibilities in this project is the sensing capabilities. So I will be using a series of 8 pairs of Infrared receivers and emitters to sense the passing of a metal ball prior to the activation of an electromagnetic coil causing the ball to accelerate. Because there is no digital sensor in our plans I am required to add a PISO Register Shift Chip in my components. So the infrared sensor will go to an ADC then to the chosen shift register then to my PIC microcontroller.</p>
 <table>
 <thead>
 <tr>
 <th>PIC Info</th>
 <th>Answer</th>
-<th>Help</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
 <td>PIC18F27Q10</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
 </tr>
 <tr>
 <td>Product Page URL</td>
 <td><a href="https://www.microchip.com/en-us/product/pic18f27q10">MicroChip Product Page</a></td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
 <td>Datasheet URL(s)</td>
 <td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf">Product Datasheet</a></td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
 <td>Application Notes URL(s)</td>
 <td><a href="https://www.microchip.com/en-us/application-notes/tb3238">5-Bit Digital-to-Analog Converter</a> - <a href="https://www.microchip.com/en-us/application-notes/tb3261">Writing C-Code for PIC18F</a>  - <a href="https://www.microchip.com/en-us/application-notes/tb3265">SPI Using MSSP on PIC18</a> - <a href="https://www.microchip.com/en-us/application-notes/tb3282">Using EUSART on PIC18</a></td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
 <td>Vendor link</td>
 <td><a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-E-SO/12807408?0=%2Fmicrocontrollers&amp;s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPZQDaIALAAxwDMdIAuoQA4AuUIAymwE4CWAOwDmIAL6EwAJjgRoIFJAw4CxMuBgBWAOzaEzEO048BI8YQC0FRArRY8hEpHJSpmgBwwmEkBa-zFPgBXVSdyWm8fKXUABQBJAGEwdwAxKW0ARTAqbyA">Digikey</a></td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
 <td>Code Examples</td>
 <td><a href="https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-eusart-commands-fs/tree/1.0.2">EUSART Receive Control Commands</a> - <a href="https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-eusart-printf-bare/tree/1.0.3">EUSART Send Formatted Messages Using printf</a> - <a href="https://github.com/microchip-pic-avr-examples/pic18f47q10-cnano-spi-client-receive-bare/tree/1.0.0">Receiving Data as an SPI Device</a> - <a href="https://github.com/microchip-pic-avr-examples/pic18f47q10-adcc-sensor-data-acquisition-mplab/tree/1.0.1">Sensor Data Acquisition using 10-bit ADCC</a></td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
 </tr>
 <tr>
 <td>External Resources URL(s)</td>
 <td><a href="https://www.reddit.com/r/pic_programming/">PIC Forum</a></td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
 </tr>
 <tr>
 <td>Unit cost</td>
 <td>$1.60</td>
-<td>Find in the Microchip online store, or Digikey</td>
 </tr>
 <tr>
 <td>Absolute Maximum Current for entire IC</td>
 <td>350mA</td>
-<td>Find in the microcontroller datasheet</td>
 </tr>
 <tr>
 <td>Supply Voltage Range</td>
 <td>1.8V / 3.3 - 5V / 5.5V / ~5.5V</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
 </tr>
 <tr>
 <td>Maximum GPIO current <br> (per pin)</td>
 <td>25mA</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
 </tr>
 <tr>
 <td>Required Programming Hardware, Cost, URL</td>
 <td>Programming: <a href="https://www.digikey.com/en/products/detail/microchip-technology/PG164100/9562532">PG164100</a> - $15.30</td>
-<td>found on the microcontroller's product page</td>
 </tr>
 <tr>
 <td>Works with MPLabX?</td>
 <td>Yes</td>
-<td>Required.  See <a href="https://www.microchip.com/development-tools">Microchip Development Tools</a></td>
 </tr>
 <tr>
 <td>Works with Microchip Code Configurator?</td>
 <td>Yes (See Below)</td>
-<td>Can be validated in MPLabX.  Screenshot required.</td>
 </tr>
 </tbody>
 </table>
@@ -844,7 +824,6 @@ prior experience with this component. My responsibilities in this project is the
 <th>Module</th>
 <th># Available</th>
 <th>Needed</th>
-<th>Associated Pins (or * for any)</th>
 </tr>
 </thead>
 <tbody>
@@ -852,53 +831,46 @@ prior experience with this component. My responsibilities in this project is the
 <td>GPIO</td>
 <td>36x</td>
 <td>6x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>ADC</td>
 <td>35x</td>
 <td>0x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>UART</td>
 <td>2x</td>
 <td>2x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>SPI</td>
 <td>2x</td>
 <td>2x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>I2C</td>
 <td>2x</td>
 <td>2x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>PWM</td>
 <td>2x</td>
 <td>0x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>ICSP</td>
 <td>1x</td>
 <td>1x</td>
-<td>?</td>
 </tr>
 <tr>
 <td>Clock</td>
 <td>2x</td>
 <td>2x</td>
-<td></td>
 </tr>
 </tbody>
 </table>
 <p><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MPlabtest.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MPlabtest" src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MPlabtest.png?raw=true" /></a></p>
+<p>The PIC18F47Q10 provides ample pins for this configuration, and my MCC setup shows that each peripheral is allocated to dedicated pins with no overlapping assignments. Additionally, by matching the peripheral requirements with the microcontroller’s available pins, we ensure communication and programming while maintaining flexibility for extra GPIO if needed. Overall,  my MCC configuration indicate that there are enough pins for all intended functions and no apparent errors in the pin assignments.</p>
 
 
 
