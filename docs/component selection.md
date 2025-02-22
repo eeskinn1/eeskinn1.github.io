@@ -20,15 +20,15 @@ The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A 
 heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more
 compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
 
-## Analog Digital Converter Selection
+## Comparator Selection <!-- <img src="  " width="500"> -->
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MCP3008](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MCP3008.jpg?raw=true) <br> [MCP3008](https://www.digikey.com/en/products/detail/microchip-technology/MCP3008T-I-SL/319424) <br> - $2.90 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM393DT.jpg?raw=true" width="200"> <br> [LM393DT](https://www.digikey.com/en/products/detail/stmicroelectronics/LM393DT/591695) <br> - $0.20 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS1115IDGST](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS1115IDGST.jpg?raw=true) <br> [ADS1115IDGST](https://www.digikey.com/en/products/detail/texas-instruments/ADS1115IDGST/2123298) <br> - $6.29 | - Programmable gain amplifier <br> - Very Precise (16 bit) | - Expensive <br> - I²C interface|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/TLV7022DGKR.jpg?raw=true" width="200"> <br> [TLV7022DGKR](https://www.digikey.com/en/products/detail/texas-instruments/TLV7022DGKR/12165131) <br> - $0.84 | - Programmable gain amplifier <br> - Very Precise (16 bit) | - Expensive <br> - I²C interface|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
