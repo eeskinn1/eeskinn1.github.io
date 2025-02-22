@@ -10,4 +10,4 @@ title: Schematic Design
 
 [Click here to access PDF and Zip Files](https://github.com/eeskinn1/eeskinn1.github.io/tree/main/Assets/Schematic%20Design)
 
-Schematic made in Altium Designer
+Schematic made in Altium Designer.

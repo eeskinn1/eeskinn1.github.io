@@ -6,49 +6,49 @@ title: Component Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2576HVS-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2576HVS-3.3.jpg?raw=true) <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM2576HVS-3.3.jpg?raw=true" width="200"> <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![LM2674M-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2674M-3.3.jpg?raw=true) <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM2674M-3.3.jpg?raw=true" width="200"> <br> [LM2674M-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129) <br> - $3.97 | - 86% efficiency @ 3.3V <br> - Cheapest <br> - Easy to hand solder design  | - 500mA output  |
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-| ![LM2676S-3.3](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/LM2676S-3.3.jpg?raw=true) <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
+| <img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM2676S-3.3.jpg?raw=true" width="200"> <br> [LM2676S-3.3](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) <br> - $5.72| - 86% efficiency @ 3.3V <br> - 3A Output | - Lower input Voltage |
 
 The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A output while maintaining 86% efficiency, reducing
 heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more
 compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
 
-## Comparator Selection <!-- <img src="  " width="500"> -->
+## Comparator Selection <!-- <img src="  " width="200"> -->
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM393DT.jpg?raw=true" width="200"> <br> [LM393DT](https://www.digikey.com/en/products/detail/stmicroelectronics/LM393DT/591695) <br> - $0.20 | - SPI communication <br> - 8 channels in case more are needed later <br> - Inexpensive | -  More Microcontroller Pins|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM393DT.jpg?raw=true" width="200"> <br> [LM393DT](https://www.digikey.com/en/products/detail/stmicroelectronics/LM393DT/591695) <br> - $0.20 | - Widely available and cost-effective <br> - Operates over a wide voltage range (2V to 36V) <br> - Inexpensive <br> - Dual-channel| -  Open-collector output requires a pull-up resistor <br> - Slower response time |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/TLV7022DGKR.jpg?raw=true" width="200"> <br> [TLV7022DGKR](https://www.digikey.com/en/products/detail/texas-instruments/TLV7022DGKR/12165131) <br> - $0.84 | - Programmable gain amplifier <br> - Very Precise (16 bit) | - Expensive <br> - I²C interface|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/TLV7022DGKR.jpg?raw=true" width="200"> <br> [TLV7022DGKR](https://www.digikey.com/en/products/detail/texas-instruments/TLV7022DGKR/12165131) <br> - $0.84 | - Ultra-low power consumption (only 6 µA per channel) <br> - Rail-to-rail input and output <br> - Works at lower voltages (1.6V to 5.5V) | - Higher cost compared to LM393DT <br> - Lower output drive strength|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![ADS7830IPWR](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/ADS7828EB.jpg?raw=true) <br> [ADS7830IPWR](https://www.digikey.com/en/products/detail/texas-instruments/ADS7830IPWR/1689491) <br> - $2.99 | - I2C Interface <br> - Any I2C setting <br> - Many inputs | - Low Voltage range <br> |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MCP6562T-E-SN.jpg?raw=true" width="200"> <br> [MCP6562T-E/SN](https://www.digikey.com/en/products/detail/microchip-technology/MCP6562T-E-SN/1680916) <br> - $0.76 | - Faster response time <br> - Push-pull output <br> - 1.8V to 5.5V | - Low Voltage range <br> - Higher power consumption than TLV7022 |
 
-The ADS7830 is the best choice because it features an I²C interface, which minimizes the number of microcontroller pins required. Its 8-bit resolution aligns well with my 8-bit microcontroller, ensuring efficient data handling without unnecessary overhead. Additionally, its low power consumption makes it ideal for applications where energy efficiency is important. While other ADCs may offer higher resolution, the ADS7830 balances performance, simplicity, and compatibility at a cost-effective price.
+The LM393DT is the best option for my application. The LM393DT is a low-power, high-precision dual comparator with open-collector output. It offers a wide supply voltage range, making it ideal for signal detection and sensor interfacing in compact, reliable systems. Its low offset voltage ensures stable performance. The fact that it is such a commonly used comparator means there will be ample resources for implementation.
 
 ## Shift Register Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![74HC165](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/SN74HC165DR.jpg?raw=true) <br> [74HC165](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [SN74HC165DR](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![CD4021](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/CD4021BQDRQ1.jpg?raw=true) <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/CD4021BQDRQ1.jpg?raw=true" width="200"> <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![MC74HC165A](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MC74HC165ADR2G-Q.jpg?raw=true) <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MC74HC165ADR2G-Q.jpg?raw=true" width="200"> <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
 
 The 74HC165 is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.
 
@@ -56,15 +56,15 @@ The 74HC165 is a great choice because it allows 8 digital inputs to be read usin
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![IR sensor](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HiletgoIR.png?raw=true) <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/HiletgoIR.png?raw=true" width="200"> <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![A1308KUA-1-T](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/A1308KUA-1-T.jpg?raw=true) <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier | - Ball must be magnetized <br> - Interference from Coil|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/A1308KUA-1-T.jpg?raw=true" width="200"> <br> [A1308KUA-1-T](https://www.digikey.com/en/products/detail/allegro-microsystems/A1308KUA-1-T/6821585) <br> - $1.26 | - Accurate <br> - Easier to implement | - Ball must be magnetized <br> - Interference from Coil|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|![HC-SR04](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/HC-SR04.jpg?raw=true) <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slow |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/HC-SR04.jpg?raw=true" width="200"> <br> [HC-SR04](https://www.digikey.com/en/products/detail/osepp-electronics-ltd/HC-SR04/11198533) <br> - $5.95 | - Easy to set up  <br> - Not Light dependent| - Expensive <br> - Slowest response time |
 
 The HiLetgo Infrared Emitter and Receiver is an excellent choice due to its high accuracy in detecting objects, making it ideal for precise ball-tracking applications. It also has a fast response time, ensuring real-time detection without significant delays. Additionally, at $0.55 per pair, it is cost-effective for implementing multiple detection points within budget. However, it requires proper alignment between the emitter and receiver, which may add complexity to installation and calibration.
 
@@ -102,6 +102,6 @@ prior experience with this component. My responsibilities in this project is the
 | ICSP       | 1x           | 1x      |
 | Clock      | 2x           | 2x      |
 
-![MPlabtest](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/MPlabtest.png?raw=true)
+<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MPlabtest.png?raw=true" width="200">
 
 The PIC18F47Q10 provides ample pins for this configuration, and my MCC setup shows that each peripheral is allocated to dedicated pins with no overlapping assignments. Additionally, by matching the peripheral requirements with the microcontroller’s available pins, we ensure communication and programming while maintaining flexibility for extra GPIO if needed. Overall,  my MCC configuration indicate that there are enough pins for all intended functions and no apparent errors in the pin assignments.
