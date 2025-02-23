@@ -40,17 +40,17 @@ The LM393DT is the best option for my application. The LM393DT is a low-power, h
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [SN74HC165DR](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - 3 PIC pins| - 5V Output Drive |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [SN74HC165DR](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - Simple Serial Output | - 5V Output Drive <br> - No Internal Latch |
 
 |       Solution 2       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/CD4021BQDRQ1.jpg?raw=true" width="200"> <br> [CD4021](https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638) <br> - $0.56 | - 3 PIC pins <br> - Inexpensive  | -  Less Precise <br> - Slower than 74HC165|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/74HC597D.jpg?raw=true" width="200"> <br> [74HC597D](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC597D-653/819725) <br> - $0.54 | - 3 PIC pins <br> - Inexpensive <br> - Built-in Latch | -  Less Precise <br> - Slower than 74HC165 <br> - Not as Common as SN74HC165|
 
 |       Solution 3       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MC74HC165ADR2G-Q.jpg?raw=true" width="200"> <br> [MC74HC165A](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $0.99 | - Faster Clock <br> - 3 Pins | - More expensive <br> - Less Common |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [CD74HCT597M96](https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450) <br> - $1.16 | - Integrated Storage Register <br> - Parallel Load Feature <br> - 3.3V compatibility | - Most expensive <br> - Less Common <br> - Higher Power Consumption |
 
-The 74HC165 is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.
+The SN74HC165DR is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.
 
 ## Sensor Selection
 
