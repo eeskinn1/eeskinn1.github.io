@@ -662,8 +662,8 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 <tbody>
 <tr>
 <td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068">SN74HC165DR</a> <br> - $0.22</td>
-<td>- 8 bit <br> - High speed <br> - 3 PIC pins</td>
-<td>- 5V Output Drive</td>
+<td>- 8 bit <br> - High speed <br> - Simple Serial Output</td>
+<td>- 5V Output Drive <br> - No Internal Latch</td>
 </tr>
 </tbody>
 </table>
@@ -677,9 +677,9 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/CD4021BQDRQ1.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/CD4021BQDRQ1.jpg?raw=true" width="200"></a> <br> <a href="https://www.digikey.com/en/products/detail/texas-instruments/CD4021BQDRQ1/2295638">CD4021</a> <br> - $0.56</td>
-<td>- 3 PIC pins <br> - Inexpensive</td>
-<td>-  Less Precise <br> - Slower than 74HC165</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/74HC597D.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/74HC597D.jpg?raw=true" width="200"></a> <br> <a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC597D-653/819725">74HC597D</a> <br> - $0.54</td>
+<td>- 3 PIC pins <br> - Inexpensive <br> - Built-in Latch</td>
+<td>-  Less Precise <br> - Slower than 74HC165 <br> - Not as Common as SN74HC165</td>
 </tr>
 </tbody>
 </table>
@@ -693,13 +693,13 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 </thead>
 <tbody>
 <tr>
-<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MC74HC165ADR2G-Q.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MC74HC165ADR2G-Q.jpg?raw=true" width="200"></a> <br> <a href="https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450">MC74HC165A</a> <br> - $0.99</td>
-<td>- Faster Clock <br> - 3 Pins</td>
-<td>- More expensive <br> - Less Common</td>
+<td><a class="glightbox" href="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"></a> <br> <a href="https://www.digikey.com/en/products/detail/onsemi/MC74HC165ADR2G-Q/23329450">CD74HCT597M96</a> <br> - $1.16</td>
+<td>- Integrated Storage Register <br> - Parallel Load Feature <br> - 3.3V compatibility</td>
+<td>- Most expensive <br> - Less Common <br> - Higher Power Consumption</td>
 </tr>
 </tbody>
 </table>
-<p>The 74HC165 is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.</p>
+<p>The SN74HC165DR is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.</p>
 <h2 id="sensor-selection">Sensor Selection</h2>
 <table>
 <thead>
