@@ -97,11 +97,17 @@ prior experience with this component. My responsibilities in this project is the
 | ADC        | 35x           | 0x      |
 | UART       | 2x           | 2x      |
 | SPI        | 2x           | 2x      |
-| I2C        | 2x           | 2x      |
+| I2C        | 2x           | 0x      |
 | PWM        | 2x           | 0x      |
 | ICSP       | 1x           | 1x      |
-| Clock      | 2x           | 2x      |
+| Clock      | 2x           | 1x      |
 
-<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MPlabtest.png?raw=true" width="200">
+## MPlab Test
+
+<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MPlabtest.png?raw=true">
 
 The PIC18F47Q10 provides ample pins for this configuration, and my MCC setup shows that each peripheral is allocated to dedicated pins with no overlapping assignments. Additionally, by matching the peripheral requirements with the microcontroller’s available pins, we ensure communication and programming while maintaining flexibility for extra GPIO if needed. Overall,  my MCC configuration indicate that there are enough pins for all intended functions and no apparent errors in the pin assignments.
+
+## Power Budget
+
+<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SensorPowerBudget.png?raw=true">
