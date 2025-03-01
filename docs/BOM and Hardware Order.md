@@ -1,5 +1,5 @@
 ---
-title: Bill of Materials and Purchase Request
+title: Bill of Materials and Hardware Order
 ---
 
 ## Bill of Materials
