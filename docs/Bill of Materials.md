@@ -1,5 +1,5 @@
 ---
-title: Bill of Materials
+title: Bill of Materials and Purchase Request
 ---
 
 ## Bill of Materials
