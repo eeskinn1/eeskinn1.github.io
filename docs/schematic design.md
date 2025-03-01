@@ -4,7 +4,7 @@ title: Schematic Design and Power Budget
 
 ## Schematic
 
-![Schematic](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Schematic%20Design/InfraredSensorPIC.png?raw=true)
+![Schematic](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Schematic%20Design/InfraredSensorPIC1.png?raw=true)
 
 ## Files
 
