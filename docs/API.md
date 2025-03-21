@@ -7,12 +7,12 @@ tags:
 
 ## Message Structure
 
-Start Byte (2 8uint_t)
-Sender Address (8uint_t)
-Receiver Address (8uint_t)
+Start Byte (2 uint8_t)
+Sender Address (uint8_t)
+Receiver Address (uint8_t)
 Message Type (uint8_t)
-Message (1-56 8uint_t)
-Stop Byte (2 8uint_t)
+Message (1-56 uint8_t)
+Stop Byte (2 uint8_t)
 
 ## Team Definitions
 
@@ -67,53 +67,66 @@ Stop Byte (2 8uint_t)
 |Max| 100 |
 |Example| 2  |
 
-### Message Type 3 (Sensor Error)
+### Message Type 3 (Error)
 
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Sensor Error  |
-|Variable Type| uint8_t  |
-|Min| 0  |
-|Max| 5  |
-|Example| 1 (Reset)|
+|  |  Byte 1  |  Byte 2  |
+| -----------| ----------- |----------- |
+|Message|  Error  | Sensor Error |
+|Variable Type| uint8_t | uint8_t |
+|Min| 0  | 0 |
+|Max| 5  | 3 |
+|Example| 1 (Reset)| 3 (Sensor 4 Error) |
 
 Error Types:
-
-0: Sensor 1 Failure
-1: Sensor 2 Failure
-2: Sensor 3 Failure
-3: Sensor 4 Failure
+0: Incorrect / No Start Bit
+1: Incorrect / No Address Bit
+2: Incorrect / No Message Type
+3: Incorrect / No Stop Bit
 4: Incorrect Data Value in Valid Message
 5: Bytes per Message Overflow
 
 ## Code Handling
 
-When Actuator Subsystem receives a message, the following is the protocol for handling:
+### Message Handling
 
-1. Identify start and begin copying it to array for retransmission
-2. When Receiver Byte is identified, check if mine or broadcast
-    2a. If not mine, finish copying to retransmission array then retransmit
-    2b. If mine, continue to step 3
-    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3
-3. Identify Message Type
-4. Utilize message information
-5. Trash Message
-6. Transmit relevant data
-7. Continue from step one when receiving a new message
+1. Identify the start of a message and begin copying it to an array for retransmission.
 
-For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.
+2. When the Receiver Byte is identified, determine if it is addressed to me or broadcast:
 
-Should characters be sent outside of start or stop bits, they are ignored and trashed.
+   - If not mine, finish copying to the retransmission array and retransmit.
 
-To elaborate on step 6 and error handling
+   - If mine, proceed to step 3.
 
-1. Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array
-2. To a temporary array, begin by adding start bytes and my address byte
-3. Then add receiving address which in most cases will be MQTT, HMI, or broadcast
-4. Add message type byte based on messaging protocols above
-5. Complete message by adding data then capping with stop bytes
-6. Check if already transmitting, if so wait for transmission to end and delay then send
-7. Otherwise send
-8. Trash temporary sending array
+   - If broadcast, copy to the retransmit array, retransmit, and continue to step 3.
 
-A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.
+3. Identify the Message Type.
+
+4. Process the message and extract relevant sensor data.
+
+5. Discard the message after processing.
+
+6. Transmit the collected sensor data based on the message type.
+
+7. When a new message is received, restart from step one.
+
+Each step includes error checking to validate the message. If a message fails validation, an error code and the sender's address will be transmitted. If characters are received outside of valid start and stop bits, they are ignored and discarded.
+
+### Error Handling
+
+1. Whenever an event triggers data transmission (e.g., periodic sensor readings, error detection, or reset), begin constructing the message in an array.
+
+2. Start by adding the start bytes and the Sensor Subsystem address to a temporary array.
+
+3. Include the receiving address, which will typically be MQTT, HMI, or broadcast.
+
+4. Append the message type byte, following the defined messaging protocol.
+
+5. Add the sensor data and terminate the message with stop bytes.
+
+6. If a transmission is already in progress, wait for completion, apply a delay, then send.
+
+7. If no transmission is ongoing, send the message immediately.
+
+8. Clear the temporary sending array after transmission.
+
+A group transmission schedule may be implemented to enhance message reliability and minimize data loss.
