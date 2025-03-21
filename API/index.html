@@ -12,14 +12,16 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/API/">
       
       
+        <link rel="prev" href="..">
       
-        <link rel="next" href="API/">
+      
+        <link rel="next" href="../BOM%20and%20Hardware%20Order/">
       
       
-      <link rel="icon" href="static/logo.png">
+      <link rel="icon" href="../static/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.4.0">
             
 
@@ -27,14 +29,14 @@
 
     
       
-        <title>Welcome - Evan Skinner EGR314 Project</title>
+        <title>Actuator API - Evan Skinner EGR314 Project</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.9f615399.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.9f615399.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.649f08f9.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.649f08f9.min.css">
       
       
 
@@ -53,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +66,7 @@
     
 
 
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -73,7 +75,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -91,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#design-project" class="md-skip">
+        <a href="#message-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -107,9 +109,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Evan Skinner EGR314 Project" class="md-header__button md-logo" aria-label="Evan Skinner EGR314 Project" data-md-component="logo">
+    <a href=".." title="Evan Skinner EGR314 Project" class="md-header__button md-logo" aria-label="Evan Skinner EGR314 Project" data-md-component="logo">
       
-  <img src="static/logo.svg" alt="logo">
+  <img src="../static/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -126,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome
+              Actuator API
             
           </span>
         </div>
@@ -198,11 +200,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -217,9 +217,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="API/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -236,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="BOM%20and%20Hardware%20Order/" class="md-tabs__link">
+      <a href="../BOM%20and%20Hardware%20Order/" class="md-tabs__link">
         
   
     
@@ -253,7 +255,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="block%20diagram/" class="md-tabs__link">
+      <a href="../block%20diagram/" class="md-tabs__link">
         
   
     
@@ -270,7 +272,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="component%20selection/" class="md-tabs__link">
+      <a href="../component%20selection/" class="md-tabs__link">
         
   
     
@@ -287,7 +289,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="schematic%20design/" class="md-tabs__link">
+      <a href="../schematic%20design/" class="md-tabs__link">
         
   
     
@@ -327,9 +329,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Evan Skinner EGR314 Project" class="md-nav__button md-logo" aria-label="Evan Skinner EGR314 Project" data-md-component="logo">
+    <a href=".." title="Evan Skinner EGR314 Project" class="md-nav__button md-logo" aria-label="Evan Skinner EGR314 Project" data-md-component="logo">
       
-  <img src="static/logo.svg" alt="logo">
+  <img src="../static/logo.svg" alt="logo">
 
     </a>
     Evan Skinner EGR314 Project
@@ -353,6 +355,25 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -366,18 +387,18 @@
           
   
   <span class="md-ellipsis">
-    Welcome
+    Actuator API
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Welcome
+    Actuator API
   </span>
   
 
@@ -397,22 +418,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-project" class="md-nav__link">
-    Design Project
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-role" class="md-nav__link">
-    Project Role
+  <a href="#team-definitions" class="md-nav__link">
+    Team Definitions
   </a>
+  
+    <nav class="md-nav" aria-label="Team Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-bytes" class="md-nav__link">
+    Team Bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-addresses" class="md-nav__link">
+    Team Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#link-to-team-website" class="md-nav__link">
-    Link to Team Website
+  <a href="#recieved-messages" class="md-nav__link">
+    Recieved Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Recieved Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-14-master-reset" class="md-nav__link">
+    Message Type 14 (Master Reset)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 15 (Speed Setting from HMI)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sent-messages" class="md-nav__link">
+    Sent Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Sent Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
+    Message Type 8 (Switchings Per Second)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-9-error" class="md-nav__link">
+    Message Type 9 (Error)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-10-reset" class="md-nav__link">
+    Message Type 10 (Reset)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-handling" class="md-nav__link">
+    Code Handling
   </a>
   
 </li>
@@ -431,26 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="API/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Actuator API
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="BOM%20and%20Hardware%20Order/" class="md-nav__link">
+      <a href="../BOM%20and%20Hardware%20Order/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="block%20diagram/" class="md-nav__link">
+      <a href="../block%20diagram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="component%20selection/" class="md-nav__link">
+      <a href="../component%20selection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="schematic%20design/" class="md-nav__link">
+      <a href="../schematic%20design/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,22 +628,103 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-project" class="md-nav__link">
-    Design Project
+  <a href="#message-structure" class="md-nav__link">
+    Message Structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-role" class="md-nav__link">
-    Project Role
+  <a href="#team-definitions" class="md-nav__link">
+    Team Definitions
   </a>
+  
+    <nav class="md-nav" aria-label="Team Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#team-bytes" class="md-nav__link">
+    Team Bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-addresses" class="md-nav__link">
+    Team Addresses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#link-to-team-website" class="md-nav__link">
-    Link to Team Website
+  <a href="#recieved-messages" class="md-nav__link">
+    Recieved Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Recieved Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-14-master-reset" class="md-nav__link">
+    Message Type 14 (Master Reset)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-15-speed-setting-from-hmi" class="md-nav__link">
+    Message Type 15 (Speed Setting from HMI)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sent-messages" class="md-nav__link">
+    Sent Messages
+  </a>
+  
+    <nav class="md-nav" aria-label="Sent Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-8-switchings-per-second" class="md-nav__link">
+    Message Type 8 (Switchings Per Second)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-9-error" class="md-nav__link">
+    Message Type 9 (Error)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-10-reset" class="md-nav__link">
+    Message Type 10 (Reset)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-handling" class="md-nav__link">
+    Code Handling
   </a>
   
 </li>
@@ -580,7 +744,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/API.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -588,16 +752,270 @@
   
 
 
-  <h1>Welcome</h1>
+  <h1>Actuator API</h1>
 
-<h2 id="design-project">Design Project</h2>
-<p>My name is Evan Skinner I am an ASU student pursuing a bachelors
-in Electrical Engineering. This webpage will serve as a repository for the
-files, work and photos of my design project for EGR314.</p>
-<h2 id="project-role">Project Role</h2>
-<p>My role in this project is the Sensing subsystem. My system will sense, using Infrared light, the rolling ball in order to activate the Magnetic coils on time.</p>
-<h2 id="link-to-team-website">Link to Team Website</h2>
-<p><a href="https://asu-egr314-2025-s-310.github.io/">Link to go to Team 310 Website</a></p>
+<h2 id="message-structure">Message Structure</h2>
+<p>Start Byte (2 8uint_t)
+Sender Address (8uint_t)
+Receiver Address (8uint_t)
+Message Type (uint8_t)
+Message (1-56 8uint_t)
+Stop Byte (2 8uint_t)</p>
+<h2 id="team-definitions">Team Definitions</h2>
+<h3 id="team-bytes">Team Bytes</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Byte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>AZ</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td>YB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="team-addresses">Team Addresses</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Noah Brent</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Evan Skinner</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Kirk Volin</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Hunter Hassebroek</td>
+<td>H</td>
+</tr>
+<tr>
+<td>Broadcast</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recieved-messages">Recieved Messages</h2>
+<h3 id="message-type-14-master-reset">Message Type 14 (Master Reset)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Master Reset</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>char</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>RST</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>RST</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>RST</td>
+</tr>
+</tbody>
+</table>
+<h3 id="message-type-15-speed-setting-from-hmi">Message Type 15 (Speed Setting from HMI)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Speed Setting</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>2 (Medium Speed)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sent-messages">Sent Messages</h2>
+<h3 id="message-type-8-switchings-per-second">Message Type 8 (Switchings Per Second)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td># of Switchings</td>
+<td>Time Since Last Triggered</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>255</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>12</td>
+<td>24 (24 hundreths of a second)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="message-type-9-error">Message Type 9 (Error)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+<th>Byte 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Error Type</td>
+<td>Address Received</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+<td>char</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>0</td>
+<td>Z (No error address)</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>5</td>
+<td>Address of Error</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>2</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<p>Error Types:</p>
+<p>0: Incorrect / No Start Bit
+1: Incorrect / No Address Bit
+2: Incorrect / No Message Type
+3: Incorrect / No Stop Bit
+4: Incorrect Data Value in Valid Message
+5: Bytes per Message Overflow</p>
+<h3 id="message-type-10-reset">Message Type 10 (Reset)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message</td>
+<td>Reset of Actuator System</td>
+</tr>
+<tr>
+<td>Variable Type</td>
+<td>uint8_t</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>1 (Reset)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-handling">Code Handling</h2>
+<p>When Actuator Subsystem receives a message, the following is the protocol for handling:</p>
+<ol>
+<li>Identify start and begin copying it to array for retransmission</li>
+<li>When Receiver Byte is identified, check if mine or broadcast
+    2a. If not mine, finish copying to retransmission array then retransmit
+    2b. If mine, continue to step 3
+    2c. If broadcast byte, copy to retransmit array, retransmit, and continue to step 3</li>
+<li>Identify Message Type</li>
+<li>Utilize message information</li>
+<li>Trash Message</li>
+<li>Transmit relevant data</li>
+<li>Continue from step one when receiving a new message</li>
+</ol>
+<p>For each step, there will be an error check to confirm the message is valid. Should it fail, the error code and address it was sent from will be transmitted.</p>
+<p>Should characters be sent outside of start or stop bits, they are ignored and trashed.</p>
+<p>To elaborate on step 6 and error handling</p>
+<ol>
+<li>Whenever an interruptive event occurs (ie switching info every second, error, or reset) begin contruction of message in array</li>
+<li>To a temporary array, begin by adding start bytes and my address byte</li>
+<li>Then add receiving address which in most cases will be MQTT, HMI, or broadcast</li>
+<li>Add message type byte based on messaging protocols above</li>
+<li>Complete message by adding data then capping with stop bytes</li>
+<li>Check if already transmitting, if so wait for transmission to end and delay then send</li>
+<li>Otherwise send</li>
+<li>Trash temporary sending array</li>
+</ol>
+<p>A group sending schedule may be implemented to improve message success rates and ensure minimal message loss.</p>
 
 
 
@@ -624,15 +1042,31 @@ files, work and photos of my design project for EGR314.</p>
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Welcome" rel="prev">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Welcome
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="API/" class="md-footer__link md-footer__link--next" aria-label="Next: Actuator API" rel="next">
+          <a href="../BOM%20and%20Hardware%20Order/" class="md-footer__link md-footer__link--next" aria-label="Next: Bill of Materials and Hardware Order" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Actuator API
+                Bill of Materials and Hardware Order
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -676,12 +1110,12 @@ files, work and photos of my design project for EGR314.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.follow", "navigation.top", "navigation.path", "navigation.indexes", "navigation.prune", "content.action.edit", "navigation.footer"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.4e0fa4ba.min.js"></script>
+      <script src="../assets/javascripts/bundle.4e0fa4ba.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
