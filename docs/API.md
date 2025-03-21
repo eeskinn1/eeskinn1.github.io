@@ -7,12 +7,12 @@ tags:
 
 ## Message Structure
 
-Start Byte (2 uint8_t)
-Sender Address (uint8_t)
-Receiver Address (uint8_t)
-Message Type (uint8_t)
-Message (1-56 uint8_t)
-Stop Byte (2 uint8_t)
+Start Byte (2 uint8_t) <br>
+Sender Address (uint8_t)<br>
+Receiver Address (uint8_t)<br>
+Message Type (uint8_t)<br>
+Message (1-56 uint8_t)<br>
+Stop Byte (2 uint8_t)<br>
 
 ## Team Definitions
 
@@ -93,25 +93,25 @@ Error Types:
 
 2. When the Receiver Byte is identified, determine if it is addressed to me or broadcast:
 
-   - If not mine, finish copying to the retransmission array and retransmit.
+    2a. If not mine, finish copying to the retransmission array and retransmit.
 
-   - If mine, proceed to step 3.
+    2b. If mine, proceed to step 3.
 
-   - If broadcast, copy to the retransmit array, retransmit, and continue to step 3.
+    2c. If broadcast, copy to the retransmit array, retransmit, and continue to step 3.
 
-3. Identify the Message Type.
+1. Identify the Message Type.
 
-4. Process the message and extract relevant sensor data.
+2. Process the message and extract relevant sensor data.
 
-5. Discard the message after processing.
+3. Discard the message after processing.
 
-6. Transmit the collected sensor data based on the message type.
+4. Transmit the collected sensor data based on the message type.
 
-7. When a new message is received, restart from step one.
+5. When a new message is received, restart from step one.
 
 Each step includes error checking to validate the message. If a message fails validation, an error code and the sender's address will be transmitted. If characters are received outside of valid start and stop bits, they are ignored and discarded.
 
-### Error Handling
+### Error/Message Transmission Handling
 
 1. Whenever an event triggers data transmission (e.g., periodic sensor readings, error detection, or reset), begin constructing the message in an array.
 
