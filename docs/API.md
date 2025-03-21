@@ -1,5 +1,5 @@
 ---
-title: Actuator API
+title: Sensor API
 tags:
 - tag1
 - tag2
@@ -35,7 +35,7 @@ Stop Byte (2 8uint_t)
 
 ## Recieved Messages
 
-### Message Type 14 (Master Reset)
+### Message Type 4 (Master Reset)
 
 |  |  Byte 1     |
 | -----------| ----------- |
@@ -45,57 +45,46 @@ Stop Byte (2 8uint_t)
 |Max| RST |
 |Example| RST |
 
-### Message Type 15 (Speed Setting from HMI)
+## Sent Messages
+
+### Message Type 1 (Start Communication)
 
 |  |  Byte 1     |
 | -----------| ----------- |
-|Message| Speed Setting  |
+|Message| Com Ready |
 |Variable Type| uint8_t  |
-|Min|  1 |
-|Max|  3 |
-|Example| 2 (Medium Speed)|
+|Min| 0 |
+|Max| 1 |
+|Example| 1 |
 
-## Sent Messages
+### Message Type 2 (Ball Speed)
 
-### Message Type 8 (Switchings Per Second)
+|  |  Byte 1     |
+| -----------| ----------- |
+|Message| Sensor Location |
+|Variable Type| uint8_t  |
+|Min| 0  |
+|Max| 100 |
+|Example| 2  |
 
-|  |  Byte 1     |  Byte 2   |
-| -----------| ----------- | ----------- |
-|Message| # of Switchings | Time Since Last Triggered |
-|Variable Type| uint8_t  | uint8_t  |
-|Min| 0 | 0 |
-|Max| 255 | 100  |
-|Example| 12 | 24 (24 hundreths of a second) |
+### Message Type 3 (Sensor Error)
 
-### Message Type 9 (Error)
-
-|  |  Byte 1     |  Byte 2   |
-| -----------| ----------- | ----------- |
-|Message| Error Type | Address Received |
-|Variable Type| uint8_t  | char |
-|Min| 0  | Z (No error address) |
-|Max| 5 | Address of Error  |
-|Example| 2  | E  |
+|  |  Byte 1     |
+| -----------| ----------- |
+|Message| Sensor Error  |
+|Variable Type| uint8_t  |
+|Min| 0  |
+|Max| 5  |
+|Example| 1 (Reset)|
 
 Error Types:
 
-0: Incorrect / No Start Bit
-1: Incorrect / No Address Bit
-2: Incorrect / No Message Type
-3: Incorrect / No Stop Bit
+0: Sensor 1 Failure
+1: Sensor 2 Failure
+2: Sensor 3 Failure
+3: Sensor 4 Failure
 4: Incorrect Data Value in Valid Message
 5: Bytes per Message Overflow
-
-
-### Message Type 10 (Reset)
-
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Reset of Actuator System  |
-|Variable Type| uint8_t  |
-|Min| 0  |
-|Max| 1  |
-|Example| 1 (Reset)|
 
 ## Code Handling
 
