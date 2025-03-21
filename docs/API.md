@@ -35,7 +35,7 @@ Stop Byte (2 uint8_t)<br>
 
 ## Recieved Messages
 
-### Message Type 4 (Master Reset)
+### Message Type 14 (Master Reset)
 
 |  |  Byte 1     |
 | -----------| ----------- |
