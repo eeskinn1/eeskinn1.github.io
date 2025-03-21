@@ -521,8 +521,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    Error Handling
+  <a href="#errormessage-transmission-handling" class="md-nav__link">
+    Error/Message Transmission Handling
   </a>
   
 </li>
@@ -744,8 +744,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    Error Handling
+  <a href="#errormessage-transmission-handling" class="md-nav__link">
+    Error/Message Transmission Handling
   </a>
   
 </li>
@@ -781,12 +781,12 @@
   <h1>Sensor API</h1>
 
 <h2 id="message-structure">Message Structure</h2>
-<p>Start Byte (2 uint8_t)
-Sender Address (uint8_t)
-Receiver Address (uint8_t)
-Message Type (uint8_t)
-Message (1-56 uint8_t)
-Stop Byte (2 uint8_t)</p>
+<p>Start Byte (2 uint8_t) <br>
+Sender Address (uint8_t)<br>
+Receiver Address (uint8_t)<br>
+Message Type (uint8_t)<br>
+Message (1-56 uint8_t)<br>
+Stop Byte (2 uint8_t)<br></p>
 <h2 id="team-definitions">Team Definitions</h2>
 <h3 id="team-bytes">Team Bytes</h3>
 <table>
@@ -985,15 +985,9 @@ Stop Byte (2 uint8_t)</p>
 </li>
 <li>
 <p>When the Receiver Byte is identified, determine if it is addressed to me or broadcast:</p>
-</li>
-<li>
-<p>If not mine, finish copying to the retransmission array and retransmit.</p>
-</li>
-<li>
-<p>If mine, proceed to step 3.</p>
-</li>
-<li>
-<p>If broadcast, copy to the retransmit array, retransmit, and continue to step 3.</p>
+<p>2a. If not mine, finish copying to the retransmission array and retransmit.</p>
+<p>2b. If mine, proceed to step 3.</p>
+<p>2c. If broadcast, copy to the retransmit array, retransmit, and continue to step 3.</p>
 </li>
 <li>
 <p>Identify the Message Type.</p>
@@ -1012,7 +1006,7 @@ Stop Byte (2 uint8_t)</p>
 </li>
 </ol>
 <p>Each step includes error checking to validate the message. If a message fails validation, an error code and the sender's address will be transmitted. If characters are received outside of valid start and stop bits, they are ignored and discarded.</p>
-<h3 id="error-handling">Error Handling</h3>
+<h3 id="errormessage-transmission-handling">Error/Message Transmission Handling</h3>
 <ol>
 <li>
 <p>Whenever an event triggers data transmission (e.g., periodic sensor readings, error detection, or reset), begin constructing the message in an array.</p>
