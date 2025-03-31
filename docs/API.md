@@ -35,55 +35,58 @@ Stop Byte (2 uint8_t)<br>
 
 ## Recieved Messages
 
-### Message Type 14 (Master Reset)
+### Message Type 14 - (Master System Reset)
 
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Master Reset  |
-|Variable Type| char  |
-|Min| RST |
-|Max| RST |
-|Example| RST |
+- Broadcast message from remote user on MQTT to trigger reset on the system. 
+- If RST is sent to the MQTT SUB, it will trigger this static message to reset all subsystems.
+
+|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  |
+| -----------| ----------- | --| --| -- |
+|Variable Name| MQTT_ID  | BROADCAST_ID| masterReset | resetState |
+|Variable Type| char  | char | char| uint8_t |
+|Min| K  | X | R | 1|
+|Max| K  | X | R |1|
+|Example| K | X | R | 1|
 
 ## Sent Messages
 
 ### Message Type 1 (Start Communication)
 
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Com Ready |
-|Variable Type| uint8_t  |
-|Min| 0 |
-|Max| 1 |
-|Example| 1 |
+|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  |
+| -----------| ----------- | --| --| -- |
+|Variable Name| SENSOR_ID  | Broadcast_ID| Uart_state | Uart_ready |
+|Variable Type| char  | char | char| uint8_t |
+|Min| E  | X | R | 1|
+|Max| E  | X | R |1|
+|Example| E | X | R | 1|
 
 ### Message Type 2 (Ball Speed)
 
-|  |  Byte 1     |
-| -----------| ----------- |
-|Message| Sensor Location |
-|Variable Type| uint8_t  |
-|Min| 0  |
-|Max| 100 |
-|Example| 2  |
+|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4-: Data  |
+| -----------| ----------- | --| --| -- |
+|Variable Name| SENSOR_ID  | HMI_ID| Sensor_data | Ball_speed |
+|Variable Type| char  | char | char| uint8_t |
+|Min| E  | H | S | 00|
+|Max| E  | H | S |99|
+|Example| E | H | S | 52|
 
 ### Message Type 3 (Error)
 
-|  |  Byte 1  |  Byte 2  |
-| -----------| ----------- |----------- |
-|Message|  Error  | Sensor Error |
-|Variable Type| uint8_t | uint8_t |
-|Min| 0  | 0 |
-|Max| 5  | 3 |
-|Example| 1 (Reset)| 3 (Sensor 4 Error) |
+|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  |
+| -----------| ----------- | --| --| -- |
+|Variable Name| SENSOR_ID  | MQTT_ID| Uart_state | Uart_ready |
+|Variable Type| char  | char | char| uint8_t |
+|Min| E  | K | F | 1|
+|Max| E  | K | F |1|
+|Example| E | K | F | 1|
 
 Error Types:
-0: Incorrect / No Start Bit
-1: Incorrect / No Address Bit
-2: Incorrect / No Message Type
-3: Incorrect / No Stop Bit
-4: Incorrect Data Value in Valid Message
-5: Bytes per Message Overflow
+0: Incorrect / No Start Bit <br>
+1: Incorrect / No Address Bit<br>
+2: Incorrect / No Message Type<br>
+3: Incorrect / No Stop Bit<br>
+4: Incorrect Data Value in Valid Message<br>
+5: Bytes per Message Overflow<br>
 
 ## Code Handling
 
