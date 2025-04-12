@@ -56,9 +56,9 @@ Stop Byte (2 uint8_t)<br>
 | -----------| ----------- | --| --| -- |
 |Variable Name| SENSOR_ID  | Broadcast_ID| Uart_state | Uart_ready |
 |Variable Type| char  | char | char| uint8_t |
-|Min| E  | X | R | 1|
-|Max| E  | X | R |1|
-|Example| E | X | R | 1|
+|Min| E  | X | U | 1|
+|Max| E  | X | U |1|
+|Example| E | X | U | 1|
 
 ### Message Type 2 (Ball Speed)
 
