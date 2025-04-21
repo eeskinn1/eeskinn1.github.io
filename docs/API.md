@@ -50,35 +50,25 @@ Stop Byte (2 uint8_t)<br>
 
 ## Sent Messages
 
-### Message Type 1 (Start Communication)
+### Message Type 1 (Ball Speed)
 
-|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  |
-| -----------| ----------- | --| --| -- |
-|Variable Name| SENSOR_ID  | Broadcast_ID| Uart_state | Uart_ready |
-|Variable Type| char  | char | char| uint8_t |
-|Min| E  | X | U | 1|
-|Max| E  | X | U |1|
-|Example| E | X | U | 1|
+|  | Message Byte 1-2 <br> Message Prefix | Byte 3 <br> Sender ID | Byte 4 <br> Receiver ID | Byte 5 <br> Data Type | Byte 6 <br> Data Value| Byte 7-8 End Message |
+| -----------| --- |----------- | --| --| -- | -- |
+|Variable Name| Message Start |SENSOR_ID  | HMI_ID| Sensor_data | Ball_speed | End Message |
+|Variable Type| char |char  | char | char| uint8_t | char |
+|Min| AZ |E  | H | S | 00| YB |
+|Max| AZ |E  | H | S |99| YB |
+|Example| AZ |E | H | S | 52| YB |
 
-### Message Type 2 (Ball Speed)
+### Message Type 2 (Error)
 
-|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4-: Data  |
-| -----------| ----------- | --| --| -- |
-|Variable Name| SENSOR_ID  | HMI_ID| Sensor_data | Ball_speed |
-|Variable Type| char  | char | char| uint8_t |
-|Min| E  | H | S | 00|
-|Max| E  | H | S |99|
-|Example| E | H | S | 52|
-
-### Message Type 3 (Error)
-
-|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  |
-| -----------| ----------- | --| --| -- |
-|Variable Name| SENSOR_ID  | MQTT_ID| Uart_state | Uart_ready |
-|Variable Type| char  | char | char| uint8_t |
-|Min| E  | K | F | 1|
-|Max| E  | K | F |1|
-|Example| E | K | F | 1|
+|  | Message Byte 1-2 <br> Message Prefix | Byte 3 <br> Sender ID | Byte 4 <br> Receiver ID | Byte 5 <br> Data Type | Byte 6 <br> Data Value| Byte 7-8 End Message |
+| -----------| --- |----------- | --| --| -- | -- |
+|Variable Name| Message Start |SENSOR_ID  | BROADCAST_ID| Error | Error_type | End Message |
+|Variable Type| char |char  | char | char| uint8_t | char |
+|Min| AZ |E  | X | F | 0| YB |
+|Max| AZ |E  | X | F |5| YB |
+|Example| AZ |E | X | F | 2| YB |
 
 Error Types:
 0: Incorrect / No Start Bit <br>
