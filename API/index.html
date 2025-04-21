@@ -480,22 +480,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-1-start-communication" class="md-nav__link">
-    Message Type 1 (Start Communication)
+  <a href="#message-type-1-ball-speed" class="md-nav__link">
+    Message Type 1 (Ball Speed)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-2-ball-speed" class="md-nav__link">
-    Message Type 2 (Ball Speed)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-3-error" class="md-nav__link">
-    Message Type 3 (Error)
+  <a href="#message-type-2-error" class="md-nav__link">
+    Message Type 2 (Error)
   </a>
   
 </li>
@@ -703,22 +696,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-1-start-communication" class="md-nav__link">
-    Message Type 1 (Start Communication)
+  <a href="#message-type-1-ball-speed" class="md-nav__link">
+    Message Type 1 (Ball Speed)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#message-type-2-ball-speed" class="md-nav__link">
-    Message Type 2 (Ball Speed)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-3-error" class="md-nav__link">
-    Message Type 3 (Error)
+  <a href="#message-type-2-error" class="md-nav__link">
+    Message Type 2 (Error)
   </a>
   
 </li>
@@ -893,150 +879,125 @@ Stop Byte (2 uint8_t)<br></p>
 </tbody>
 </table>
 <h2 id="sent-messages">Sent Messages</h2>
-<h3 id="message-type-1-start-communication">Message Type 1 (Start Communication)</h3>
+<h3 id="message-type-1-ball-speed">Message Type 1 (Ball Speed)</h3>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Byte 1: Sender</th>
-<th>Byte 2: Receiver</th>
-<th>Byte 3: Data Type</th>
-<th>Byte 4: Data</th>
+<th>Message Byte 1-2 <br> Message Prefix</th>
+<th>Byte 3 <br> Sender ID</th>
+<th>Byte 4 <br> Receiver ID</th>
+<th>Byte 5 <br> Data Type</th>
+<th>Byte 6 <br> Data Value</th>
+<th>Byte 7-8 End Message</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Variable Name</td>
-<td>SENSOR_ID</td>
-<td>Broadcast_ID</td>
-<td>Uart_state</td>
-<td>Uart_ready</td>
-</tr>
-<tr>
-<td>Variable Type</td>
-<td>char</td>
-<td>char</td>
-<td>char</td>
-<td>uint8_t</td>
-</tr>
-<tr>
-<td>Min</td>
-<td>E</td>
-<td>X</td>
-<td>U</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Max</td>
-<td>E</td>
-<td>X</td>
-<td>U</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Example</td>
-<td>E</td>
-<td>X</td>
-<td>U</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="message-type-2-ball-speed">Message Type 2 (Ball Speed)</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Byte 1: Sender</th>
-<th>Byte 2: Receiver</th>
-<th>Byte 3: Data Type</th>
-<th>Byte 4-: Data</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable Name</td>
+<td>Message Start</td>
 <td>SENSOR_ID</td>
 <td>HMI_ID</td>
 <td>Sensor_data</td>
 <td>Ball_speed</td>
+<td>End Message</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>char</td>
 <td>char</td>
 <td>char</td>
+<td>char</td>
 <td>uint8_t</td>
+<td>char</td>
 </tr>
 <tr>
 <td>Min</td>
+<td>AZ</td>
 <td>E</td>
 <td>H</td>
 <td>S</td>
 <td>00</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Max</td>
+<td>AZ</td>
 <td>E</td>
 <td>H</td>
 <td>S</td>
 <td>99</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Example</td>
+<td>AZ</td>
 <td>E</td>
 <td>H</td>
 <td>S</td>
 <td>52</td>
+<td>YB</td>
 </tr>
 </tbody>
 </table>
-<h3 id="message-type-3-error">Message Type 3 (Error)</h3>
+<h3 id="message-type-2-error">Message Type 2 (Error)</h3>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>Byte 1: Sender</th>
-<th>Byte 2: Receiver</th>
-<th>Byte 3: Data Type</th>
-<th>Byte 4: Data</th>
+<th>Message Byte 1-2 <br> Message Prefix</th>
+<th>Byte 3 <br> Sender ID</th>
+<th>Byte 4 <br> Receiver ID</th>
+<th>Byte 5 <br> Data Type</th>
+<th>Byte 6 <br> Data Value</th>
+<th>Byte 7-8 End Message</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Variable Name</td>
+<td>Message Start</td>
 <td>SENSOR_ID</td>
-<td>MQTT_ID</td>
-<td>Uart_state</td>
-<td>Uart_ready</td>
+<td>BROADCAST_ID</td>
+<td>Error</td>
+<td>Error_type</td>
+<td>End Message</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>char</td>
 <td>char</td>
 <td>char</td>
+<td>char</td>
 <td>uint8_t</td>
+<td>char</td>
 </tr>
 <tr>
 <td>Min</td>
+<td>AZ</td>
 <td>E</td>
-<td>K</td>
+<td>X</td>
 <td>F</td>
-<td>1</td>
+<td>0</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Max</td>
+<td>AZ</td>
 <td>E</td>
-<td>K</td>
+<td>X</td>
 <td>F</td>
-<td>1</td>
+<td>5</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Example</td>
+<td>AZ</td>
 <td>E</td>
-<td>K</td>
+<td>X</td>
 <td>F</td>
-<td>1</td>
+<td>2</td>
+<td>YB</td>
 </tr>
 </tbody>
 </table>
