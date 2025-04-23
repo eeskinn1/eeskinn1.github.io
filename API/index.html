@@ -503,19 +503,40 @@
     Code Handling
   </a>
   
-    <nav class="md-nav" aria-label="Code Handling">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-workflow" class="md-nav__link">
+    Message Handling Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Handling Workflow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-handling" class="md-nav__link">
-    Message Handling
+  <a href="#message-reception" class="md-nav__link">
+    Message Reception
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#errormessage-transmission-handling" class="md-nav__link">
-    Error/Message Transmission Handling
+  <a href="#message-processing" class="md-nav__link">
+    Message Processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    Error Handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmission-protocol" class="md-nav__link">
+    Transmission Protocol
   </a>
   
 </li>
@@ -719,19 +740,40 @@
     Code Handling
   </a>
   
-    <nav class="md-nav" aria-label="Code Handling">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-workflow" class="md-nav__link">
+    Message Handling Workflow
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Handling Workflow">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-handling" class="md-nav__link">
-    Message Handling
+  <a href="#message-reception" class="md-nav__link">
+    Message Reception
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#errormessage-transmission-handling" class="md-nav__link">
-    Error/Message Transmission Handling
+  <a href="#message-processing" class="md-nav__link">
+    Message Processing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    Error Handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmission-protocol" class="md-nav__link">
+    Transmission Protocol
   </a>
   
 </li>
@@ -1015,62 +1057,106 @@ Stop Byte (2 uint8_t)<br></p>
 4: Incorrect Data Value in Valid Message<br>
 5: Bytes per Message Overflow<br></p>
 <h2 id="code-handling">Code Handling</h2>
-<h3 id="message-handling">Message Handling</h3>
+<p>Message Structure
+All messages follow this standardized format:</p>
+<p>Start Sequence: 2-byte header (AZ)</p>
+<p>Addressing:</p>
+<p>Sender identifier (1 byte)</p>
+<p>Receiver identifier (1 byte)</p>
+<p>Payload:</p>
+<p>Command type (1 bytes)</p>
+<p>Data field (variable length)</p>
+<p>Termination: 2-byte footer (YB)</p>
+<h2 id="message-handling-workflow">Message Handling Workflow</h2>
+<h3 id="message-reception">Message Reception</h3>
 <ol>
 <li>
-<p>Identify the start of a message and begin copying it to an array for retransmission.</p>
+<p>System continuously monitors for valid start sequence</p>
 </li>
 <li>
-<p>When the Receiver Byte is identified, determine if it is addressed to me or broadcast:</p>
-<p>2a. If not mine, finish copying to the retransmission array and retransmit.</p>
-<p>2b. If mine, proceed to step 3.</p>
-<p>2c. If broadcast, copy to the retransmit array, retransmit, and continue to step 3.</p>
+<p>Verify sender/receiver identifiers against authorized device list</p>
 </li>
 <li>
-<p>Identify the Message Type.</p>
+<p>Confirm message length within protocol limits</p>
 </li>
 <li>
-<p>Process the message and extract relevant sensor data.</p>
-</li>
-<li>
-<p>Discard the message after processing.</p>
-</li>
-<li>
-<p>Transmit the collected sensor data based on the message type.</p>
-</li>
-<li>
-<p>When a new message is received, restart from step one.</p>
+<p>Check for proper termination sequence</p>
 </li>
 </ol>
-<p>Each step includes error checking to validate the message. If a message fails validation, an error code and the sender's address will be transmitted. If characters are received outside of valid start and stop bits, they are ignored and discarded.</p>
-<h3 id="errormessage-transmission-handling">Error/Message Transmission Handling</h3>
+<h3 id="message-processing">Message Processing</h3>
 <ol>
 <li>
-<p>Whenever an event triggers data transmission (e.g., periodic sensor readings, error detection, or reset), begin constructing the message in an array.</p>
+<p>Messages addressed specifically to the device are processed internally</p>
 </li>
 <li>
-<p>Start by adding the start bytes and the Sensor Subsystem address to a temporary array.</p>
+<p>Broadcast messages are both processed and retransmitted</p>
 </li>
 <li>
-<p>Include the receiving address, which will typically be MQTT, HMI, or broadcast.</p>
+<p>Messages for other devices are immediately forwarded</p>
 </li>
 <li>
-<p>Append the message type byte, following the defined messaging protocol.</p>
+<p>Reset commands trigger system reinitialization</p>
 </li>
 <li>
-<p>Add the sensor data and terminate the message with stop bytes.</p>
-</li>
-<li>
-<p>If a transmission is already in progress, wait for completion, apply a delay, then send.</p>
-</li>
-<li>
-<p>If no transmission is ongoing, send the message immediately.</p>
-</li>
-<li>
-<p>Clear the temporary sending array after transmission.</p>
+<p>Data messages update internal state variables</p>
 </li>
 </ol>
-<p>A group transmission schedule may be implemented to enhance message reliability and minimize data loss.</p>
+<h3 id="error-handling">Error Handling</h3>
+<p>Validation Failures:</p>
+<ol>
+<li>
+<p>Malformed headers/terminators</p>
+</li>
+<li>
+<p>Unauthorized sender/receiver</p>
+</li>
+<li>
+<p>Protocol violations</p>
+</li>
+</ol>
+<p>Error Reporting:</p>
+<ol>
+<li>
+<p>Automatic error code transmission</p>
+</li>
+<li>
+<p>Includes source of problematic message</p>
+</li>
+<li>
+<p>Maintains communication logs</p>
+</li>
+</ol>
+<h3 id="transmission-protocol">Transmission Protocol</h3>
+<p>Message Generation</p>
+<ol>
+<li>
+<p>Automatic inclusion of device identifier</p>
+</li>
+<li>
+<p>Dynamic payload construction based on event type</p>
+</li>
+<li>
+<p>Proper termination sequence appended</p>
+</li>
+</ol>
+<p>Prioritization:</p>
+<ol>
+<li>
+<p>Error messages take transmission priority</p>
+</li>
+<li>
+<p>Sensor data transmitted on state change</p>
+</li>
+</ol>
+<p>Transmission Management</p>
+<ol>
+<li>
+<p>Minimum inter-message spacing enforced</p>
+</li>
+<li>
+<p>Automatic retransmission for critical messages</p>
+</li>
+</ol>
 
 
 
