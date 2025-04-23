@@ -80,46 +80,86 @@ Error Types:
 
 ## Code Handling
 
-### Message Handling
+Message Structure
+All messages follow this standardized format:
 
-1. Identify the start of a message and begin copying it to an array for retransmission.
+Start Sequence: 2-byte header (AZ)
 
-2. When the Receiver Byte is identified, determine if it is addressed to me or broadcast:
+Addressing:
 
-    2a. If not mine, finish copying to the retransmission array and retransmit.
+Sender identifier (1 byte)
 
-    2b. If mine, proceed to step 3.
+Receiver identifier (1 byte)
 
-    2c. If broadcast, copy to the retransmit array, retransmit, and continue to step 3.
+Payload:
 
-1. Identify the Message Type.
+Command type (1 bytes)
 
-2. Process the message and extract relevant sensor data.
+Data field (variable length)
 
-3. Discard the message after processing.
+Termination: 2-byte footer (YB)
 
-4. Transmit the collected sensor data based on the message type.
+## Message Handling Workflow
 
-5. When a new message is received, restart from step one.
+### Message Reception
 
-Each step includes error checking to validate the message. If a message fails validation, an error code and the sender's address will be transmitted. If characters are received outside of valid start and stop bits, they are ignored and discarded.
+1. System continuously monitors for valid start sequence
 
-### Error/Message Transmission Handling
+2. Verify sender/receiver identifiers against authorized device list
 
-1. Whenever an event triggers data transmission (e.g., periodic sensor readings, error detection, or reset), begin constructing the message in an array.
+3. Confirm message length within protocol limits
 
-2. Start by adding the start bytes and the Sensor Subsystem address to a temporary array.
+4. Check for proper termination sequence
 
-3. Include the receiving address, which will typically be MQTT, HMI, or broadcast.
+### Message Processing
 
-4. Append the message type byte, following the defined messaging protocol.
+1. Messages addressed specifically to the device are processed internally
 
-5. Add the sensor data and terminate the message with stop bytes.
+2. Broadcast messages are both processed and retransmitted
 
-6. If a transmission is already in progress, wait for completion, apply a delay, then send.
+3. Messages for other devices are immediately forwarded
 
-7. If no transmission is ongoing, send the message immediately.
+4. Reset commands trigger system reinitialization
 
-8. Clear the temporary sending array after transmission.
+5. Data messages update internal state variables
 
-A group transmission schedule may be implemented to enhance message reliability and minimize data loss.
+### Error Handling
+
+Validation Failures:
+
+1. Malformed headers/terminators
+
+2. Unauthorized sender/receiver
+
+3. Protocol violations
+
+Error Reporting:
+
+1. Automatic error code transmission
+
+2. Includes source of problematic message
+
+3. Maintains communication logs
+
+### Transmission Protocol
+
+Message Generation
+
+1. Automatic inclusion of device identifier
+
+2. Dynamic payload construction based on event type
+
+3. Proper termination sequence appended
+
+Prioritization:
+
+1. Error messages take transmission priority
+
+2. Sensor data transmitted on state change
+
+Transmission Management
+
+1. Minimum inter-message spacing enforced
+
+2. Automatic retransmission for critical messages
+
