@@ -460,8 +460,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-14-master-system-reset" class="md-nav__link">
-    Message Type 14 - (Master System Reset)
+  <a href="#message-type-5-master-system-reset" class="md-nav__link">
+    Message Type 5 - (Master System Reset)
   </a>
   
 </li>
@@ -676,8 +676,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-14-master-system-reset" class="md-nav__link">
-    Message Type 14 - (Master System Reset)
+  <a href="#message-type-5-master-system-reset" class="md-nav__link">
+    Message Type 5 - (Master System Reset)
   </a>
   
 </li>
@@ -825,7 +825,7 @@ Stop Byte (2 uint8_t)<br></p>
 </tbody>
 </table>
 <h2 id="recieved-messages">Recieved Messages</h2>
-<h3 id="message-type-14-master-system-reset">Message Type 14 - (Master System Reset)</h3>
+<h3 id="message-type-5-master-system-reset">Message Type 5 - (Master System Reset)</h3>
 <ul>
 <li>Broadcast message from remote user on MQTT to trigger reset on the system. </li>
 <li>If RST is sent to the MQTT SUB, it will trigger this static message to reset all subsystems.</li>
@@ -889,7 +889,8 @@ Stop Byte (2 uint8_t)<br></p>
 <th>Byte 4 <br> Receiver ID</th>
 <th>Byte 5 <br> Data Type</th>
 <th>Byte 6 <br> Data Value</th>
-<th>Byte 7-8 End Message</th>
+<th>Byte 7 <br> Data Value</th>
+<th>Byte 8-9 End Message</th>
 </tr>
 </thead>
 <tbody>
@@ -899,7 +900,8 @@ Stop Byte (2 uint8_t)<br></p>
 <td>SENSOR_ID</td>
 <td>HMI_ID</td>
 <td>Sensor_data</td>
-<td>Ball_speed</td>
+<td>Sensor_State</td>
+<td>Sensor_Location</td>
 <td>End Message</td>
 </tr>
 <tr>
@@ -908,7 +910,8 @@ Stop Byte (2 uint8_t)<br></p>
 <td>char</td>
 <td>char</td>
 <td>char</td>
-<td>uint8_t</td>
+<td>char</td>
+<td>char</td>
 <td>char</td>
 </tr>
 <tr>
@@ -917,7 +920,8 @@ Stop Byte (2 uint8_t)<br></p>
 <td>E</td>
 <td>H</td>
 <td>S</td>
-<td>00</td>
+<td>0</td>
+<td>1</td>
 <td>YB</td>
 </tr>
 <tr>
@@ -926,7 +930,8 @@ Stop Byte (2 uint8_t)<br></p>
 <td>E</td>
 <td>H</td>
 <td>S</td>
-<td>99</td>
+<td>1</td>
+<td>4</td>
 <td>YB</td>
 </tr>
 <tr>
@@ -935,7 +940,8 @@ Stop Byte (2 uint8_t)<br></p>
 <td>E</td>
 <td>H</td>
 <td>S</td>
-<td>52</td>
+<td>0</td>
+<td>2</td>
 <td>YB</td>
 </tr>
 </tbody>
