@@ -50,7 +50,7 @@ Stop Byte (2 uint8_t)<br>
 
 ## Sent Messages
 
-### Message Type 1 (Ball Speed)
+### Message Type 1 (Sensor State)
 
 |  | Message Byte 1-2 <br> Message Prefix | Byte 3 <br> Sender ID | Byte 4 <br> Receiver ID | Byte 5 <br> Data Type | Byte 6 <br> Data Value| Byte 7 <br> Data Value | Byte 8-9 End Message |
 | -----------| --- |----------- | --| --| -- | -- | -- |
