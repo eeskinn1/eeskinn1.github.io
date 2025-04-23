@@ -35,7 +35,7 @@ Stop Byte (2 uint8_t)<br>
 
 ## Recieved Messages
 
-### Message Type 14 - (Master System Reset)
+### Message Type 5 - (Master System Reset)
 
 - Broadcast message from remote user on MQTT to trigger reset on the system. 
 - If RST is sent to the MQTT SUB, it will trigger this static message to reset all subsystems.
@@ -52,13 +52,13 @@ Stop Byte (2 uint8_t)<br>
 
 ### Message Type 1 (Ball Speed)
 
-|  | Message Byte 1-2 <br> Message Prefix | Byte 3 <br> Sender ID | Byte 4 <br> Receiver ID | Byte 5 <br> Data Type | Byte 6 <br> Data Value| Byte 7-8 End Message |
-| -----------| --- |----------- | --| --| -- | -- |
-|Variable Name| Message Start |SENSOR_ID  | HMI_ID| Sensor_data | Ball_speed | End Message |
-|Variable Type| char |char  | char | char| uint8_t | char |
-|Min| AZ |E  | H | S | 00| YB |
-|Max| AZ |E  | H | S |99| YB |
-|Example| AZ |E | H | S | 52| YB |
+|  | Message Byte 1-2 <br> Message Prefix | Byte 3 <br> Sender ID | Byte 4 <br> Receiver ID | Byte 5 <br> Data Type | Byte 6 <br> Data Value| Byte 7 <br> Data Value | Byte 8-9 End Message |
+| -----------| --- |----------- | --| --| -- | -- | -- |
+|Variable Name| Message Start |SENSOR_ID  | HMI_ID| Sensor_data | Sensor_State | Sensor_Location | End Message |
+|Variable Type| char |char  | char | char| char | char | char |
+|Min| AZ |E  | H | S | 0| 1 | YB |
+|Max| AZ |E  | H | S | 1 | 4 | YB |
+|Example| AZ |E | H | S | 0 | 2 | YB |
 
 ### Message Type 2 (Error)
 
