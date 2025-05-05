@@ -2,7 +2,18 @@
 title: Component Selection
 ---
 
-## Voltage Regulator Selection
+## Updated Component Selection
+
+|       Final Components       |     Pro       |     Con       |
+|------------------------|---------------|---------------|
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM2576HVS-3.3.jpg?raw=true" width="200"> <br> [LM2576HVS-3.3](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917) <br> - $8.45| - High Voltage Input <br> - 3 Amp output <br> - Easier to solder size | - Lower Efficiency (75% @ 3.3V) <br> - On/off switch requires voltage from external source |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM393DT.jpg?raw=true" width="200"> <br> [LM393DT](https://www.digikey.com/en/products/detail/stmicroelectronics/LM393DT/591695) <br> - $0.20 | - Widely available and cost-effective <br> - Operates over a wide voltage range (2V to 36V) <br> - Inexpensive <br> - Dual-channel| -  Open-collector output requires a pull-up resistor <br> - Slower response time |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [SN74HC165DR](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - Simple Serial Output | - 5V Output Drive <br> - No Internal Latch |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/HiletgoIR.png?raw=true" width="200"> <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment <br> - Can be sensitive |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/PIC18F27Q10.jpg?raw=true" width="200"> <br> [PIC18F27Q10 Microcontroller](https://www.digikey.co.uk/en/products/detail/microchip-technology/PIC18F27Q10-E-SO/12807408) <br> - $1.44 | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment <br> - Can be sensitive |
+## Previous Component Selection
+
+### Voltage Regulator Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
@@ -20,7 +31,7 @@ The LM2676S-3.3, Solution 3 is the optimal choice because it provides a high 3A 
 heat generation and power loss. Its 260 kHz switching frequency allows for smaller inductors and capacitors, making the design more
 compact and responsive to load changes compared to the lower-frequency LM2576HVS-3.3. While the LM2674M-3.3 is efficient, its 500mA limit is too low for my needs.
 
-## Comparator Selection <!-- <img src="  " width="200"> -->
+### Comparator Selection <!-- <img src="  " width="200"> -->
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
@@ -36,7 +47,7 @@ compact and responsive to load changes compared to the lower-frequency LM2576HVS
 
 The LM393DT is the best option for my application. The LM393DT is a low-power, high-precision dual comparator with open-collector output. It offers a wide supply voltage range, making it ideal for signal detection and sensor interfacing in compact, reliable systems. Its low offset voltage ensures stable performance. The fact that it is such a commonly used comparator means there will be ample resources for implementation.
 
-## Shift Register Selection
+### Shift Register Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
@@ -52,7 +63,7 @@ The LM393DT is the best option for my application. The LM393DT is a low-power, h
 
 The SN74HC165DR is a great choice because it allows 8 digital inputs to be read using only three microcontroller (PIC) pins, significantly reducing GPIO usage. It operates at high speed, making it well-suited for applications requiring fast data transfer. Additionally, at just $0.22, it is a very cost-effective solution for expanding digital inputs.
 
-## Sensor Selection
+### Sensor Selection
 
 |       Solution 1       |     Pro       |     Con       |
 |------------------------|---------------|---------------|
@@ -68,7 +79,7 @@ The SN74HC165DR is a great choice because it allows 8 digital inputs to be read 
 
 The HiLetgo Infrared Emitter and Receiver is an excellent choice due to its high accuracy in detecting objects, making it ideal for precise ball-tracking applications. It also has a fast response time, ensuring real-time detection without significant delays. Additionally, at $0.55 per pair, it is cost-effective for implementing multiple detection points within budget. However, it requires proper alignment between the emitter and receiver, which may add complexity to installation and calibration.
 
-## Microcontroller Selection
+### Microcontroller Selection
 
 The class of microcontrollers that we will be using is an 8-bit Microchip PIC microcontroller
 which has many forms and pin counts. This brand of microcontroller is appealing because of
@@ -102,12 +113,12 @@ prior experience with this component. My responsibilities in this project is the
 | ICSP       | 1x           | 1x      |
 | Clock      | 2x           | 1x      |
 
-## MPlab Test
+### MPlab Test
 
 <img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/MPlabtest.png?raw=true">
 
 The PIC18F47Q10 provides ample pins for this configuration, and my MCC setup shows that each peripheral is allocated to dedicated pins with no overlapping assignments. Additionally, by matching the peripheral requirements with the microcontroller’s available pins, we ensure communication and programming while maintaining flexibility for extra GPIO if needed. Overall,  my MCC configuration indicate that there are enough pins for all intended functions and no apparent errors in the pin assignments.
 
-## Power Budget
+### Power Budget
 
 <img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SensorPowerBudget.png?raw=true">
