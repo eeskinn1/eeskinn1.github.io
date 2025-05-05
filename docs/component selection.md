@@ -10,7 +10,10 @@ title: Component Selection
 |<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/LM393DT.jpg?raw=true" width="200"> <br> [LM393DT](https://www.digikey.com/en/products/detail/stmicroelectronics/LM393DT/591695) <br> - $0.20 | - Widely available and cost-effective <br> - Operates over a wide voltage range (2V to 36V) <br> - Inexpensive <br> - Dual-channel| -  Open-collector output requires a pull-up resistor <br> - Slower response time |
 |<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/SN74HC165DR.jpg?raw=true" width="200"> <br> [SN74HC165DR](https://www.digikey.com/en/products/detail/texas-instruments/SN74HC165DR/377068) <br> - $0.22 | - 8 bit <br> - High speed <br> - Simple Serial Output | - 5V Output Drive <br> - No Internal Latch |
 |<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/HiletgoIR.png?raw=true" width="200"> <br> [HiLetgo Infrared Emitter and Receiver](https://www.amazon.com/HiLetgo-Infrared-Emitter-Receiver-Emission/dp/B00M1PN5TK/ref=sr_1_4?sr=8-4) <br> - $0.55 per pair | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment <br> - Can be sensitive |
-|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/PIC18F27Q10.jpg?raw=true" width="200"> <br> [PIC18F27Q10 Microcontroller](https://www.digikey.co.uk/en/products/detail/microchip-technology/PIC18F27Q10-E-SO/12807408) <br> - $1.44 | - High Accuracy <br> - Fast Response Time <br> - Inexpensive | - Requires Alignment <br> - Can be sensitive |
+|<img src="https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/Component%20Selection/PIC18F27Q10.jpg?raw=true" width="200"> <br> [PIC18F27Q10 Microcontroller](https://www.digikey.co.uk/en/products/detail/microchip-technology/PIC18F27Q10-E-SO/12807408) <br> - $1.44 | - Capable <br> - Fast  <br> - Inexpensive | - Requires MPLAB <br> - Can be sensitive <br> - C Code|
+
+I was luckier than some in this class and I didn't have to switch out any components or change my design in that way. The Shift Register performed better than expected with responsiveness and ease of use.
+
 ## Previous Component Selection
 
 ### Voltage Regulator Selection
