@@ -13,7 +13,11 @@ files, work and photos of my design project for EGR314.
 
 ## Project Role
 
-My role in this project is the Sensing subsystem. My system will sense, using Infrared light, the rolling ball in order to activate the Magnetic coils on time.
+My role in this project is the Sensing subsystem. My system will sense, using Infrared light, the rolling ball in order to activate the Magnetic coils on time and calculate the speed of the ball.
+
+## Magnetic Ball Accelerator
+
+[Picture of Project](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets\Project.jpg?raw=true)
 
 ## Link to Team Website
 
