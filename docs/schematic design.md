@@ -10,9 +10,9 @@ If I were to make a 2.0 version I would change the inductor I used. The one I us
 
 ### Pictures of Populated PCB
 
-![Front](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/IMG_2443.HEIC?raw=true)
+![Front](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/IMG_2443.jpg?raw=true)
 
-![Schematic](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/IMG_2444.HEIC?raw=true)
+![Back](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets/IMG_2444.jpg?raw=true)
 
 ### PIC Microcontroller Schematic
 
