@@ -17,7 +17,7 @@ My role in this project is the Sensing subsystem. My system will sense, using In
 
 ## Magnetic Ball Accelerator
 
-[Picture of Project](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets\Project.jpg?raw=true)
+![Picture of Project](https://github.com/eeskinn1/eeskinn1.github.io/blob/main/Assets\Project.jpg?raw=true)
 
 3D Scan of Project Provided by [Dominick Trusko](https://recpal.github.io/DomTrusko304.github.io/)
 
